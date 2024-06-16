@@ -2,7 +2,7 @@ const mainSwiper = new Swiper('.swiper-container.swiper-hotel-number', {
     slidesPerView: 'auto',
     speed: 500,
     initialSlide: 1,
-    allowTouchMove: false, // Отключение перелистывания основного Swiper
+    allowTouchMove: false,
     centeredSlides: true,
     loop: true,
     effect: "coverflow",
@@ -49,6 +49,9 @@ function initNestedSwiper(mainSwiper) {
             spaceBetween: 50,
             speed: 700,
             loop: true,
+            autoplay: {
+                delay: 2000,
+            },
             pagination: {
                 el: nestedSwiper.querySelector('.swiper-image-pagination'),
                 clickable: true,
@@ -95,7 +98,7 @@ new Swiper('.swiper-container.swiper-sauna', {
     loop: true,
     autoplay: {
         delay: 2000,
-      },
+    },
     pagination: {
         el: '.swiper-sauna-pagination',
         clickable: true,

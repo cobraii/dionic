@@ -99,7 +99,7 @@ ul {
 .main {
   padding: 0 130px;
   width: 100%;
-  background-image: url("/img/main-bg.png");
+  background-image: url("./img/main-bg.png");
   background-size: cover;
   color: #ecf1f7; }
   @media (max-width: 1599px) {
@@ -224,7 +224,7 @@ ul {
     background: #f8f9fb; }
 
 .hotel-number {
-  background-image: url(/img/hotel-number/image-bg.png);
+  background-image: url(./img/hotel-number/image-bg.png);
   background-size: cover; }
 
 .hotel-number-wrapper {

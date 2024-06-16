@@ -1,0 +1,39 @@
+.contacts {
+    display: block;
+    background-image: url(/img/contacts/image-bg.png);
+    background-size: cover;
+}
+
+.contacts-title {
+    margin-bottom: 80px;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 124%;
+    text-transform: uppercase;
+    color: #f8f9fb;
+}
+
+.contacts-row{
+    display: flex;
+
+}
+
+.contacts-data {
+    margin-right: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 380px;
+}
+
+.contacts-data-content-text {
+    padding-top: 20px;
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 0.03em;
+    color: #fff;
+}
+
+.contacts-map iframe{
+    border-radius: 10px;
+}

@@ -1,0 +1,38 @@
+.footer {
+    padding: 0 130px;
+    width: 100%;
+}
+
+.nav-container-rights{
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.footer-content {
+    padding-bottom: 40px;
+    margin-top: 70px;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    color: #fff;
+}
+
+.footer-content-text {
+    margin-bottom: 20px;
+}
+
+.footer-content-number {
+    margin-bottom: 20px;
+}
+
+.footer-social-networks {
+    display: flex;
+    gap: 15px;
+}
+.footer-social-networks-icon {
+    width: 20px;
+    height: 20px;
+}

@@ -1,0 +1,119 @@
+.hotel-number{
+    background-image: url(/img/hotel-number/image-bg.png);
+    background-size: cover;
+}
+
+.hotel-number-wrapper {
+    overflow: hidden;
+}
+
+.hotel-number-title{
+    margin-bottom: 80px;
+    font-weight: 700;
+    font-size: 55px;
+    text-transform: uppercase;
+    color: #f8f9fb;
+    text-align: center;
+}
+
+.swiper-slide-hotel-number{
+    width: 650px !important;
+}
+
+.hotel-number-content {
+    position: relative;
+    width: 650px;
+    height: 420px;
+    overflow: hidden; 
+}
+
+.hotel-number-content:hover .hotel-number-info-services{
+    opacity: 1;
+    max-height: 400px;
+}
+
+.swiper-slide-image:hover .hotel-number-info-wrapper {
+    max-height: 300px;
+}
+
+.swiper-slide-image{
+    width: 650px;
+    height: 420px;
+    border-radius: 10px;
+}
+
+.hotel-number-info-wrapper{
+    padding-bottom: 40px;
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    z-index: 10;
+    max-height: 180px; 
+    overflow: hidden; 
+    transition: max-height 0.3s ease;
+}
+
+.hotel-number-info-title {
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 33px;
+    text-transform: uppercase;
+    color: #f8f9fb;
+}
+
+.hotel-number-info-price {
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 0.03em;
+}
+
+.hotel-number-info-text {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 0.03em;
+    color: #f8f9fb;
+}
+
+.hotel-number-info-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 400px;
+    max-height: 0;
+    transition: opacity 0.3s, max-height 0.3s;
+    opacity: 0;
+}
+
+.hotel-number-info-services-item {
+    display: flex;
+    gap: 10px;
+}
+
+.swiper-pagination.swiper-image-pagination {
+    padding-right: 35px;
+    padding-bottom: 20px;
+    span{
+        border-radius: 100px;
+        width: 100px;
+        height: 3px;
+        background: #f8f9fb;
+    }
+
+}
+
+.hotel-number-button{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    width: 400px;
+}
+
+
+.hotel-number-info-wrapper {
+    display: none;
+}
+
+.swiper-slide-active .hotel-number-info-wrapper {
+    display: block;
+}

@@ -1,0 +1,68 @@
+.main-excursions {
+  height: 581px;
+  background-image: url("/img/excursions/excursion-bg.png");
+  background-size: cover;
+  color: #ecf1f7; }
+
+.main-excursions-content {
+  width: 961px;
+  height: 341px; }
+
+.main-excursions-content-title {
+  margin-bottom: 50px;
+  font-weight: 800;
+  font-size: 100px;
+  line-height: 1; }
+
+.main-excursions-content-text {
+  margin-bottom: 50px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.popular-destinations-wrapper {
+  width: 1100px;
+  font-family: "Inter", sans-serif; }
+
+.popular-destinations-content-item-image {
+  width: 350px;
+  height: 238px;
+  border-radius: 20px; }
+
+.popular-destinations-title {
+  margin-bottom: 80px;
+  font-weight: 700;
+  font-size: 60px;
+  color: #453c41; }
+
+.popular-destinations-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 40px; }
+
+.popular-destinations-content-item-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border-radius: 15px;
+  width: 350px;
+  height: 102px;
+  background: #036280; }
+
+.popular-destinations-content-item-info-title {
+  width: 190px;
+  font-weight: 700;
+  font-size: 30px;
+  color: #ecf1f7; }
+
+.popular-destinations-content-item-info-title.kodor {
+  width: 100px; }
+
+.popular-destinations-content-item-info-title.gagsky {
+  width: 255px; }
+
+.popular-destinations-content-item-info-title.snt-places {
+  width: 215px; }
+
+/*# sourceMappingURL=excursions.css.map */

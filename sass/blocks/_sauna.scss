@@ -1,0 +1,49 @@
+.sauna-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.sauna-info{
+    margin-right: 155px;
+}
+
+.sauna-info-title {
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 55px;
+    text-transform: uppercase;
+    color: #f8f9fb;
+}
+
+.sauna-info-text {
+    margin-bottom: 40px;
+    width: 535px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 144%;
+    letter-spacing: 0.03em;
+    color: #fff;
+}
+
+
+.sauna-image-container {
+    width: 650px;
+    height: 470px;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide-sauna{
+    height: 433px;
+}
+
+.swiper-pagination.swiper-sauna-pagination {
+    padding-top: 20px;
+    span{
+        border-radius: 100px;
+        width: 100px;
+        height: 3px;
+        background: #f8f9fb;
+    }
+
+}

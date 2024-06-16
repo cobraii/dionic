@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Идеальное место для отдыха</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <div class="container">
+        <!-- <div class="flutter section none">
+            <div class="section-content-form">
+                <form class="form" id="form">
+                    <div class="form-title-wrapper">
+                        <h3 class="form-title">Это будет незабываемый отдых</h3>
+                        <img class="form-close" src="./img/svg/close.svg" alt="Close">
+                    </div>
+                    <div class="form-content-human-data">
+                        <h4 class="form-content-human-data-step">Шаг 1/3</h4>
+                        <div class="form-data">
+                            <input class="form-data-input" id="form-name" type="text" placeholder="Имя">
+                            <input class="form-data-input" id="form-surname" type="text" placeholder="Фамилия">
+                            <input class="form-data-input" id="form-phone" type="tel" placeholder="Телефон">
+                        </div>
+                        <div class="form-button">
+                            <button class="form-button-continued" >Продолжить</button>
+                            <p class="form-button-text">Нажимая на кнопку, я даю разрешение на обработку данных</p>
+                        </div>
+                    </div>
+                    <div class="form-content-info-data none">
+                        <h4 class="form-content-human-data-step">Шаг 2/3</h4>
+                        <div class="form-data">
+                            <label class="checkbox-block">
+                                <input type="checkbox" name="radio-group" class="checkbox-block__real">
+                                <div class="checkbox-block__fake"></div>
+                                <div class="checkbox-block__text">Нужен трансфер</div>
+                            </label>    
+                            <label class="checkbox-block">
+                                <input type="checkbox" name="radio-group" class="checkbox-block__real">
+                                <div class="checkbox-block__fake"></div>
+                                <div class="checkbox-block__text">Я с питомцами</div>
+                            </label>    
+                            <label class="checkbox-block">
+                                <input type="checkbox" name="radio-group" class="checkbox-block__real">
+                                <div class="checkbox-block__fake"></div>
+                                <div class="checkbox-block__text">Нужна парковка</div>
+                            </label>    
+                        </div>
+                        <div class="form-button">
+                            <button class="form-button-continued" >Продолжить</button>
+                            <p class="form-button-text">Нажимая на кнопку, я даю разрешение на обработку данных</p>
+                        </div>
+                    </div>
+                    <div class="form-content-dates-arrival none">
+                        <h4 class="form-content-human-data-step">Шаг 3/3</h4>
+                        <div class="form-data ">
+                            <div class="form-data-input-date-wrapper">
+                                <input class="form-data-input-date" id="form-name" type="date" placeholder="Заезд">
+                                <input class="form-data-input-date" id="form-surname" type="date" placeholder="Выезд">
+                            </div>
+                            <div class="form-order-call-checkbox">
+                                <p class="form-order-call-checkbox-title" data-checkbox="telegram">Позвоните мне</p>
+                                <button class="toggle-button">
+                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M18.9994 0.973267L0.999427 0.973266C0.817186 0.973839 0.638551 1.02419 0.482751 1.1189C0.326951 1.21362 0.199886 1.3491 0.115232 1.51078C0.030578 1.67245 -0.00845786 1.8542 0.00232437 2.03644C0.0131066 2.21869 0.0733006 2.39454 0.176427 2.54507L9.17643 15.5683C9.54943 16.1083 10.4474 16.1083 10.8214 15.5683L19.8214 2.54507C19.9256 2.39486 19.9867 2.21892 19.9981 2.03637C20.0094 1.85382 19.9706 1.67164 19.8859 1.50962C19.8012 1.3476 19.6738 1.21194 19.5175 1.11738C19.3612 1.02282 19.182 0.972979 18.9994 0.973267Z" fill="#453C41" />
+                                      </svg>
+                                </button>
+                                <div class="form-order-call-block none">
+                                    <ul class="form-order-call-list">
+                                        <li class="call" data-value="Мне удобней звонок">Позвоните мне</li>
+                                        <li class="whatsapp" data-value="Мне удобней WhatsApp">WhatsApp</li>
+                                        <li class="telegram" data-value="Мне удобней Telegram">Telegram</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-button">
+                            <button class="form-button-continued verify">Подтвердить</button>
+                            <p class="form-button-text">Нажимая на кнопку, я даю разрешение на обработку данных</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div> -->
+        
+        <main class="main" id="main">
+            <nav class="layout">
+                <div class="nav-container">
+                    <ul class="nav-links">
+                        <li class="nav-links-el"><a href="#main">Главная</a></li>
+                        <li class="nav-links-el"><a href="#advantages">Преимущества</a></li>
+                        <li class="nav-links-el"><a href="#hotel-number">Номера</a></li>
+                        <li class="nav-links-el"><a href="#contacts">Контакты</a></li>
+                    </ul>
+                    <div class="nav-logo">
+                        <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+                    </div>
+                </div>
+            </nav>
+            <div class="main-content">
+                <h1 class="main-content-title">Идеальное место для отдыха</h1>
+                <p class="main-content-text">Для тех, кто мечтает об уединенном отдыхе на природе, не уезжая далеко от городской суеты</p>
+                <button class="reserve-button">Забронировать</button>
+                <button class="contact-myself-button">Связаться самому</button>
+            </div>
+        </main>
+
+        <section class="advantages section" id="advantages">
+            <div class="advantages-wrapper">
+                <h2 class="advantages-title">Наши клиенты всегда довольны</h2>
+                <div class="advantages-content">
+                <div class="advantages-content-item">
+                    <img class="advantages-content-item-image" src="./img/advantages/room.png" alt="Room">
+                    <div class="advantages-content-item-info">
+                        <h3 class="advantages-content-item-info-title">Комфортные номера</h3>
+                        <p class="advantages-content-item-info-text">Со всем необходимым для прекрасного отдыха. В каждом установлены телевизоры, кондиционеры, а также WiFi. В ванных комнатах также есть косметические принадлежности и комплект полотенец. </p>
+                    </div>
+                    <button class="reserve-button">Забронировать</button>
+                    <button class="contact-myself-button">Связаться самому</button>
+                </div>
+                <div class="advantages-content-item">
+                    <img class="advantages-content-item-image" src="./img/advantages/sea.png" alt="Sea">
+                    <div class="advantages-content-item-info">
+                        <h3 class="advantages-content-item-info-title">Собственный пляж</h3>
+                        <p class="advantages-content-item-info-text">В шаговой доступности от территории комплекса есть охраняемый пляж, оборудованный зонтами и шезлонгами. Здесь вы можете насладиться теплым солнцем и окунуться в прохладное море</p>
+                    </div>
+                    <button class="reserve-button">Забронировать</button>
+                    <button class="contact-myself-button">Связаться самому</button>
+                </div>
+                <div class="advantages-content-item">
+                    <img class="advantages-content-item-image" src="./img/advantages/grill-zone.png" alt="Grill zona">
+                    <div class="advantages-content-item-info">
+                        <h3 class="advantages-content-item-info-title">Зона BBqv</h3>
+                        <p class="advantages-content-item-info-text">Уютное место для дружеских, а может даже романтических вечеров. Тут можно насладиться воздухом, не отказывая себе в удобствах современного мира. Ну, а для любителей шашлыка есть зоны BBQ.</p>
+                    </div>
+                    <button class="reserve-button">Забронировать</button>
+                    <button class="contact-myself-button">Связаться самому</button>
+                </div>
+
+            </div>
+            </div>
+        </section>
+
+        <section class="hotel-number section" id="hotel-number">
+            <div class="hotel-number-wrapper">
+                <h2 class="hotel-number-title">Живите с комфортом</h2>
+                <div class="swiper-container swiper-hotel-number">
+                    <div class="swiper-wrapper ">
+                        <div class="swiper-slide swiper-slide-hotel-number">
+                            <div class="hotel-number-content">
+                                <div class="hotel-number-content-image">
+                                    <div class="swiper-container swiper-hotel-number-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/standart/standart.png" alt="Standart">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Стандарт</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 4 200</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/standart/bedroom.png" alt="Bedroom">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Стандарт</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 4 200</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/standart/living-room.png" alt="Living room">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Стандарт</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 4 200</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/bathroom.png" alt="Bathroom">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Стандарт</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 4 200</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/bathroom-2.png" alt="Bathroom 2">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Стандарт</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 4 200</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-pagination swiper-image-pagination"></div>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-hotel-number">
+                            <div class="hotel-number-content">
+                                <div class="hotel-number-content-image">
+                                    <div class="swiper-container swiper-hotel-number-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/luxe/luxe.png" alt="Luxe">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Люкс (4, 6-местный)</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 6000</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/luxe/bedroom.png" alt="Bedroom">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Люкс (4, 6-местный)</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 6000</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/luxe/living-room.png" alt="Living room">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Люкс (4, 6-местный)</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 6000</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/bathroom.png" alt="Bathroom">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Люкс (4, 6-местный)</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 6000</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/bathroom-2.png" alt="bathroom 2">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Люкс (4, 6-местный)</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 6000</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="swiper-pagination swiper-image-pagination"></div>
+                                    </div>
+                                </div> 
+                                
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-hotel-number">
+                        <div class="hotel-number-content">
+                            <div class="hotel-number-content-image">
+                                <div class="swiper-container swiper-hotel-number-image">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide swiper-slide-image">
+                                            <img src="./img/hotel-number/standart/standart.png" alt="Standart">
+                                            <div class="hotel-number-info-wrapper">
+                                                <h3 class="hotel-number-info-title">Стандарт</h3>
+                                                <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 4 200</span> за ночь</p>
+                                                <div class="hotel-number-info-services">
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                        <span>Телевизор</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                        <span>Кондиционер</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                        <span>WiFi</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                        <span>Косметика</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                        <span>Холодильник</span>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-image">
+                                            <img src="./img/hotel-number/standart/bedroom.png" alt="Bedroom">
+                                            <div class="hotel-number-info-wrapper">
+                                                <h3 class="hotel-number-info-title">Стандарт</h3>
+                                                <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 4 200</span> за ночь</p>
+                                                <div class="hotel-number-info-services">
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                        <span>Телевизор</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                        <span>Кондиционер</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                        <span>WiFi</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                        <span>Косметика</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                        <span>Холодильник</span>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-image">
+                                            <img src="./img/hotel-number/standart/living-room.png" alt="Living room">
+                                            <div class="hotel-number-info-wrapper">
+                                                <h3 class="hotel-number-info-title">Стандарт</h3>
+                                                <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 4 200</span> за ночь</p>
+                                                <div class="hotel-number-info-services">
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                        <span>Телевизор</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                        <span>Кондиционер</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                        <span>WiFi</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                        <span>Косметика</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                        <span>Холодильник</span>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-image">
+                                            <img src="./img/hotel-number/bathroom.png" alt="Bathroom">
+                                            <div class="hotel-number-info-wrapper">
+                                                <h3 class="hotel-number-info-title">Стандарт</h3>
+                                                <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 4 200</span> за ночь</p>
+                                                <div class="hotel-number-info-services">
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                        <span>Телевизор</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                        <span>Кондиционер</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                        <span>WiFi</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                        <span>Косметика</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                        <span>Холодильник</span>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide swiper-slide-image">
+                                            <img src="./img/hotel-number/bathroom-2.png" alt="Bathroom 2">
+                                            <div class="hotel-number-info-wrapper">
+                                                <h3 class="hotel-number-info-title">Стандарт</h3>
+                                                <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 4 200</span> за ночь</p>
+                                                <div class="hotel-number-info-services">
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                        <span>Телевизор</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                        <span>Кондиционер</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                        <span>WiFi</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                        <span>Косметика</span>
+                                                    </div>
+                                                    <div class="hotel-number-info-services-item">
+                                                        <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                        <span>Холодильник</span>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-pagination swiper-image-pagination"></div>
+                                </div>
+                            </div>  
+                        </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-hotel-number">
+                            <div class="hotel-number-content">
+                                <div class="hotel-number-content-image">
+                                    <div class="swiper-container swiper-hotel-number-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/luxe/luxe.png" alt="Luxe">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Люкс (4, 6-местный)</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 6000</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/luxe/bedroom.png" alt="Bedroom">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Люкс (4, 6-местный)</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 6000</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/luxe/living-room.png" alt="Living room">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Люкс (4, 6-местный)</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 6000</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/bathroom.png" alt="Bathroom">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Люкс (4, 6-местный)</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 6000</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide swiper-slide-image">
+                                                <img src="./img/hotel-number/bathroom-2.png" alt="bathroom 2">
+                                                <div class="hotel-number-info-wrapper">
+                                                    <h3 class="hotel-number-info-title">Люкс (4, 6-местный)</h3>
+                                                    <p class="hotel-number-info-text">от <span class="hotel-number-info-price">₽ 6000</span> за ночь</p>
+                                                    <div class="hotel-number-info-services">
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/tv.svg" alt="TV">
+                                                            <span>Телевизор</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/conditioner.svg" alt="Air Conditioner">
+                                                            <span>Кондиционер</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/wifi.svg" alt="WiFi">
+                                                            <span>WiFi</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/cosmetics.svg" alt="Cosmetic">
+                                                            <span>Косметика</span>
+                                                        </div>
+                                                        <div class="hotel-number-info-services-item">
+                                                            <img class="hotel-number-info-services-item-image" src="./img/hotel-number/fridge.svg" alt="Fridge">
+                                                            <span>Холодильник</span>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="swiper-pagination swiper-image-pagination"></div>
+                                    </div>
+                                </div> 
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hotel-number-button">
+                    <button class="reserve-button">Забронировать</button>
+                    <button class="contact-myself-button">Связаться самому</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="sauna section">
+            <div class="sauna-wrapper">
+                <div class="sauna-info ">
+                    <h2 class="sauna-info-title">Сауна для вас</h2>
+                    <p class="sauna-info-text">
+                        У гостей “Диониса” есть возможность посетить сауну, расположенную прямо на территории комплекса. Там есть все необходимое для приятного и полезного времяпрепровождения: эвкалиптовые веники, шапочки и даже комната отдыха. После можно окунуться в купель с холодной водой.
+                    </p>
+                    <div class="sauna-info-button">
+                        <button class="reserve-button">Забронировать</button>
+                        <button class="contact-myself-button">Связаться самому</button>
+                    </div>
+                </div>
+                <div class="sauna-image-container">
+                    <div class="swiper-container swiper-sauna">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide swiper-slide-sauna">
+                                <img src="./img/sauna/bathhouse.png" alt="Bathhouse">
+                            </div>
+                            <div class="swiper-slide swiper-slide-sauna">
+                                <img src="./img/sauna/bathhouse-2.png" alt="Bathhouse">
+                            </div>
+                            <div class="swiper-slide swiper-slide-sauna">
+                                <img src="./img/sauna/bathhouse-3.png" alt="Bathhouse">
+                            </div>
+                            <div class="swiper-slide swiper-slide-sauna">
+                                <img src="./img/sauna/bathhouse-4.png" alt="Bathhouse">
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-pagination swiper-sauna-pagination"></div>
+        
+                    </div>  
+                </div>
+            </div>
+        </section>
+
+        <section class="photo section">
+            <h2 class="photo-title">Вот, что ждет наших гостей</h2>
+            <div class="swiper-container swiper-photo">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide-photo">
+                        <div class="swiper-slide-photo-image">
+                            <img src="./img/photo/image-1.png" alt="House">
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-photo">
+                        <div class="swiper-slide-photo-image">
+                            <img src="./img/photo/image-2.png" alt="House">
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-photo">
+                        <div class="swiper-slide-photo-image">
+                            <img src="./img/photo/image-3.png" alt="House">
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-photo">
+                        <div class="swiper-slide-photo-image">
+                            <img src="./img/photo/image-4.png" alt="House">
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-photo">
+                        <div class="swiper-slide-photo-image">
+                            <img src="./img/photo/image-6.png" alt="House">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-pagination swiper-photo-pagination"></div>
+
+                <div class="swiper-button-prev swiper-photo-prev">
+                    <svg  viewBox="0 0 96 156" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M93 3L3 78L93 153" stroke="#F8F9FB" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div class="swiper-button-next swiper-photo-next">
+                    <svg  viewBox="0 0 98 158" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.00001 4L94 79L4 154" stroke="#F8F9FB" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                </div> 
+
+            </div>
+        </section>  
+
+        <section class="contacts section" id="contacts">
+            <div class="contacts-wrapper">
+                <h2 class="contacts-title">МЫ всегда рады гостям</h2>
+                <div class="contacts-row">
+                    <div class="contacts-data">
+                        <div class="contacts-data-content">
+                            <img src="./img/contacts/phone.svg" alt="Phone">
+                            <p class="contacts-data-content-text">+7 940 714-14-43</p>
+                        </div>
+                        <div class="contacts-data-content">
+                            <img src="./img/contacts/whatsapp.svg" alt="WhatsApp">
+                            <p class="contacts-data-content-text">WhatsApp</p>
+                        </div>
+                        <div class="contacts-data-content location">
+                            <img src="./img/contacts/location.svg" alt="Location">
+                            <p class="contacts-data-content-text">Адлейба 239</p>
+                        </div>
+                        <button class="reserve-button">Забронировать</button>
+                    </div>
+                    <div class="contacts-map-container">
+                        <div class="contacts-map">
+                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac47e749f40b52db32cd97010be8807b3d67450e216cc961f1117b21458d8bbd7&amp;width=587&amp;height=310&amp;lang=ru_RU&amp;scroll=true"></script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <nav class="layout">
+                <div class="nav-container">
+                    <ul class="nav-links">
+                        <li class="nav-links-el"><a href="#main">Главная</a></li>
+                        <li class="nav-links-el"><a href="#advantages">Преимущества</a></li>
+                        <li class="nav-links-el"><a href="#hotel-number">Номера</a></li>
+                        <li class="nav-links-el"><a href="#contacts">Контакты</a></li>
+                    </ul>
+                    <p class="nav-container-rights">Все права © защищены</p>
+                </div>
+            </nav>
+            <div class="footer-content">
+                <p class="footer-content-text">Получите свой сайт от AIA Group</p>
+                <p class="footer-content-number">+7 940-945-39-07</p>
+                <div class="footer-social-networks">
+                    <img class="footer-social-networks-icon" src="./img/contacts/whatsapp.svg" alt="WhatsApp">
+                    <img src="./img/contacts/telegram.svg" alt="Telegram">
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+</html>

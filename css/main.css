@@ -1,0 +1,442 @@
+*,
+*::before,
+*::after {
+  border: 0;
+  box-sizing: border-box; }
+
+html {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth; }
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  color: #FFFFFF; }
+
+input, textarea {
+  padding: 0; }
+
+button {
+  padding: 0;
+  cursor: pointer; }
+
+label {
+  cursor: pointer; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+img {
+  pointer-events: none;
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+:focus,
+:active {
+  outline: none; }
+
+.none {
+  display: none !important; }
+
+.container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  background: #121212; }
+
+.section {
+  padding: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; }
+
+.reserve-button {
+  margin-right: 20px;
+  width: 192px;
+  height: 51px;
+  border-radius: 100px;
+  background: #058240;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: #f8f9fb; }
+
+.reserve-button:hover {
+  border: 1px solid #f8f9fb; }
+
+.contact-myself-button {
+  background: transparent;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: #f8f9fb; }
+
+.contact-myself-button:hover {
+  font-weight: 700; }
+
+.main {
+  padding: 0 130px;
+  width: 100%;
+  background-image: url("/img/main-bg.png");
+  background-size: cover;
+  color: #ecf1f7; }
+  @media (max-width: 1599px) {
+    .main {
+      padding: 0 72px; } }
+
+.layout {
+  padding-top: 40px; }
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  height: 15px; }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 50px; }
+
+.nav-links-el {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase; }
+
+.nav-links-el:hover {
+  font-weight: 700;
+  transition: font-weight 0.3s; }
+
+.nav-links-el a {
+  color: #fff; }
+
+.main-content {
+  padding: 130px 0; }
+
+.main-content-title {
+  width: 820px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 106%;
+  text-transform: uppercase; }
+
+.main-content-text {
+  margin-bottom: 50px;
+  width: 470px;
+  font-weight: 400;
+  font-size: 16px; }
+
+.advantages-content-item-image {
+  height: 287px;
+  border-radius: 10px; }
+
+.advantages-title {
+  margin-bottom: 80px;
+  width: 710px;
+  font-weight: 700;
+  font-size: 55px;
+  text-transform: uppercase;
+  color: #f8f9fb; }
+
+.advantages-content {
+  display: flex;
+  gap: 40px; }
+
+.advantages-content-item-info {
+  margin: 40px 0;
+  width: 405px; }
+
+.advantages-content-item-info-title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 33px;
+  text-transform: uppercase;
+  color: #f8f9fb; }
+
+.advantages-content-item-info-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 144%;
+  letter-spacing: 0.03em;
+  color: #f8f9fb; }
+
+.sauna-wrapper {
+  display: flex;
+  align-items: center; }
+
+.sauna-info {
+  margin-right: 155px; }
+
+.sauna-info-title {
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 55px;
+  text-transform: uppercase;
+  color: #f8f9fb; }
+
+.sauna-info-text {
+  margin-bottom: 40px;
+  width: 535px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 144%;
+  letter-spacing: 0.03em;
+  color: #fff; }
+
+.sauna-image-container {
+  width: 650px;
+  height: 470px;
+  position: relative;
+  overflow: hidden; }
+
+.swiper-slide-sauna {
+  height: 433px; }
+
+.swiper-pagination.swiper-sauna-pagination {
+  padding-top: 20px; }
+  .swiper-pagination.swiper-sauna-pagination span {
+    border-radius: 100px;
+    width: 100px;
+    height: 3px;
+    background: #f8f9fb; }
+
+.hotel-number {
+  background-image: url(/img/hotel-number/image-bg.png);
+  background-size: cover; }
+
+.hotel-number-wrapper {
+  overflow: hidden; }
+
+.hotel-number-title {
+  margin-bottom: 80px;
+  font-weight: 700;
+  font-size: 55px;
+  text-transform: uppercase;
+  color: #f8f9fb;
+  text-align: center; }
+
+.swiper-slide-hotel-number {
+  width: 650px !important; }
+
+.hotel-number-content {
+  position: relative;
+  width: 650px;
+  height: 420px;
+  overflow: hidden; }
+
+.hotel-number-content:hover .hotel-number-info-services {
+  opacity: 1;
+  max-height: 400px; }
+
+.swiper-slide-image:hover .hotel-number-info-wrapper {
+  max-height: 300px; }
+
+.swiper-slide-image {
+  width: 650px;
+  height: 420px;
+  border-radius: 10px; }
+
+.hotel-number-info-wrapper {
+  padding-bottom: 40px;
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  z-index: 10;
+  max-height: 180px;
+  overflow: hidden;
+  transition: max-height 0.3s ease; }
+
+.hotel-number-info-title {
+  margin-bottom: 25px;
+  font-weight: 700;
+  font-size: 33px;
+  text-transform: uppercase;
+  color: #f8f9fb; }
+
+.hotel-number-info-price {
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 0.03em; }
+
+.hotel-number-info-text {
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 25px;
+  letter-spacing: 0.03em;
+  color: #f8f9fb; }
+
+.hotel-number-info-services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 400px;
+  max-height: 0;
+  transition: opacity 0.3s, max-height 0.3s;
+  opacity: 0; }
+
+.hotel-number-info-services-item {
+  display: flex;
+  gap: 10px; }
+
+.swiper-pagination.swiper-image-pagination {
+  padding-right: 35px;
+  padding-bottom: 20px; }
+  .swiper-pagination.swiper-image-pagination span {
+    border-radius: 100px;
+    width: 100px;
+    height: 3px;
+    background: #f8f9fb; }
+
+.hotel-number-button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  width: 400px; }
+
+.hotel-number-info-wrapper {
+  display: none; }
+
+.swiper-slide-active .hotel-number-info-wrapper {
+  display: block; }
+
+.photo {
+  padding-top: 0;
+  flex-direction: column; }
+
+.photo-title {
+  margin-bottom: 80px;
+  font-weight: 700;
+  font-size: 55px;
+  text-transform: uppercase;
+  color: #f8f9fb; }
+
+.swiper-container.swiper-photo {
+  position: relative;
+  overflow: hidden;
+  width: 100%; }
+
+.swiper-slide.swiper-slide-photo {
+  display: flex !important;
+  justify-content: center;
+  align-items: center; }
+
+.swiper-slide-photo-image {
+  margin-bottom: 40px;
+  border-radius: 10px;
+  width: 945px;
+  height: 640px; }
+
+.swiper-pagination.swiper-photo-pagination span {
+  border-radius: 100px;
+  width: 100px;
+  height: 3px;
+  background: #f8f9fb; }
+
+.swiper-photo-prev,
+.swiper-photo-next {
+  top: 48% !important;
+  width: 100px !important;
+  height: 100px !important; }
+
+.swiper-photo-prev path,
+.swiper-photo-next path {
+  stroke-width: 5px; }
+
+.swiper-photo-prev:hover path,
+.swiper-photo-next:hover path {
+  stroke-width: 7px; }
+
+.swiper-photo-prev::after,
+.swiper-photo-next::after {
+  display: none; }
+
+.contacts {
+  display: block;
+  background-image: url(/img/contacts/image-bg.png);
+  background-size: cover; }
+
+.contacts-title {
+  margin-bottom: 80px;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 124%;
+  text-transform: uppercase;
+  color: #f8f9fb; }
+
+.contacts-row {
+  display: flex; }
+
+.contacts-data {
+  margin-right: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 380px; }
+
+.contacts-data-content-text {
+  padding-top: 20px;
+  font-weight: 700;
+  font-size: 25px;
+  letter-spacing: 0.03em;
+  color: #fff; }
+
+.contacts-map iframe {
+  border-radius: 10px; }
+
+.footer {
+  padding: 0 130px;
+  width: 100%; }
+
+.nav-container-rights {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff; }
+
+.footer-content {
+  padding-bottom: 40px;
+  margin-top: 70px;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #fff; }
+
+.footer-content-text {
+  margin-bottom: 20px; }
+
+.footer-content-number {
+  margin-bottom: 20px; }
+
+.footer-social-networks {
+  display: flex;
+  gap: 15px; }
+
+.footer-social-networks-icon {
+  width: 20px;
+  height: 20px; }
+
+/*# sourceMappingURL=main.css.map */

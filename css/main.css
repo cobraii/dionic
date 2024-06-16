@@ -224,7 +224,7 @@ ul {
     background: #f8f9fb; }
 
 .hotel-number {
-  background-image: url(/https://cobraii.github.io/img/hotel-number/image-bg.png);
+  background-image: url("/https://cobraii.github.io/img/hotel-number/image-bg.png");
   background-size: cover; }
 
 .hotel-number-wrapper {
@@ -375,7 +375,7 @@ ul {
 
 .contacts {
   display: block;
-  background-image: url(/img/contacts/image-bg.png);
+  background-image: url("https://cobraii.github.io/dionic/img/contacts/image-bg.png");
   background-size: cover; }
 
 .contacts-title {

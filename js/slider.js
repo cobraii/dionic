@@ -50,7 +50,7 @@ function initNestedSwiper(mainSwiper) {
             speed: 700,
             loop: true,
             autoplay: {
-                delay: 2000,
+                delay: 5000,
             },
             pagination: {
                 el: nestedSwiper.querySelector('.swiper-image-pagination'),
@@ -97,7 +97,7 @@ new Swiper('.swiper-container.swiper-sauna', {
     speed: 500,
     loop: true,
     autoplay: {
-        delay: 2000,
+        delay: 5000,
     },
     pagination: {
         el: '.swiper-sauna-pagination',

@@ -252,7 +252,7 @@ ul {
   max-height: 400px; }
 
 .swiper-slide-image:hover .hotel-number-info-wrapper {
-  max-height: 300px; }
+  max-height: auto; }
 
 .swiper-slide-image {
   width: 650px;
@@ -265,7 +265,6 @@ ul {
   bottom: 20px;
   left: 40px;
   z-index: 10;
-  max-height: 180px;
   overflow: hidden;
   transition: max-height 0.3s ease; }
 
@@ -357,7 +356,7 @@ ul {
 
 .swiper-photo-prev,
 .swiper-photo-next {
-  top: 48% !important;
+  transform: translateY(-50%);
   width: 100px !important;
   height: 100px !important; }
 

@@ -41,7 +41,7 @@
 
 .swiper-photo-prev,
 .swiper-photo-next{
-    top: 48% !important;
+    transform: translateY(-50%);
     width: 100px !important;
     height: 100px !important;
 }

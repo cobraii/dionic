@@ -1,18 +1,40 @@
+.sauna{
+    padding: 70px 0;
+    padding-left: 20px;
+
+    @media (max-width: 766px) {
+        padding: 40px 20px;
+    }
+}
+
 .sauna-wrapper {
     display: flex;
     align-items: center;
+
+    @media (max-width: 1199px) {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
 }
 
 .sauna-info{
     margin-right: 155px;
 }
 
-.sauna-info-title {
+.section-title-sauna-tablet{
+    display: none;
+
+    @media (max-width: 1199px) {
+        display: block;
+    }
+}
+
+.section-title-sauna {
     margin-bottom: 40px;
-    font-weight: 700;
-    font-size: 55px;
-    text-transform: uppercase;
-    color: #f8f9fb;
+
+    @media (max-width: 1199px) {
+        display: none;
+    }
 }
 
 .sauna-info-text {
@@ -20,9 +42,20 @@
     width: 535px;
     font-weight: 400;
     font-size: 16px;
-    line-height: 144%;
     letter-spacing: 0.03em;
     color: #fff;
+
+    @media (max-width: 1199px) {
+        margin-top: 55px;
+        margin-bottom: 55px;
+    }
+
+    @media (max-width: 766px) {
+        margin-bottom: 20px;
+        margin-top: 0;
+        width: 248px;
+        font-size: 9px;
+    }
 }
 
 
@@ -31,19 +64,51 @@
     height: 470px;
     position: relative;
     overflow: hidden;
+
+    @media (max-width: 1199px) {
+        width: 728px;
+        height: 510px;
+    }
+
+    @media (max-width: 766px) {
+        width: 280px;
+        height: 210px;
+    }
 }
 
 .swiper-slide-sauna{
-    height: 433px;
+    width: 650px;
+
+    @media (max-width: 1199px) {
+        width: 728px;
+    }
+
+    @media (max-width: 766px) {
+        width: 280px;
+    }
 }
 
 .swiper-pagination.swiper-sauna-pagination {
-    padding-top: 20px;
+    bottom: 0 !important;
+
+    @media (max-width: 1199px) {
+        width: 432px;
+    }
+
+    @media (max-width: 766px) {
+        bottom: 30px !important;
+        width: 100%;
+    }
+
     span{
         border-radius: 100px;
         width: 100px;
         height: 3px;
         background: #f8f9fb;
+
+        @media (max-width: 766px) {
+            width: 40px;
+        }
     }
 
 }

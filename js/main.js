@@ -1,3 +1,5 @@
+const block = document.querySelector('.block')
+const navElement = document.querySelectorAll(".nav-links-el")
 
 // const flutter = document.querySelector(".flutter")
 // const buttonContinued = document.querySelectorAll(".form-button-continued")
@@ -14,6 +16,20 @@
 //     })
 // })
 
+
+document.querySelector('.hamburger-menu').addEventListener('click', function () {
+	block.classList.toggle('block--active');
+});
+
+document.querySelector('.block-prev').addEventListener('click', function () {
+    block.classList.remove('block--active');
+});
+
+navElement.forEach(item => {
+    item.addEventListener("click", ()=> {
+        block.classList.remove('block--active');
+    })
+})
 
 function scroll () {
 

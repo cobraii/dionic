@@ -2,38 +2,128 @@
     display: block;
     background-image: url('/dionic/img/contacts/image-bg.png');
     background-size: cover;
+
+    @media (max-width: 1199px) {
+        background-image: url('/dionic/img/contacts/image-bg-tablet.png');
+    }
 }
 
-.contacts-title {
-    margin-bottom: 80px;
-    font-weight: 700;
-    font-size: 55px;
-    line-height: 124%;
-    text-transform: uppercase;
-    color: #f8f9fb;
+.contacts-title{
+    width: 520px;
+    
+    @media (max-width: 766px) {
+        width: 275px;
+    }
 }
 
 .contacts-row{
     display: flex;
-
 }
 
 .contacts-data {
     margin-right: 80px;
     display: flex;
     flex-wrap: wrap;
+    width: 380px;
+
+    @media (max-width: 1199px) {
+        margin-right: 50px;
+        width: 250px;
+    }
+
+    @media (max-width: 766px) {
+        margin-right: 30px;
+        flex-direction: column;
+        width: 77px;
+    }
+
+}
+
+.contacts-data-connection{
+    margin-bottom: 50px;
+    display: flex;
     gap: 30px;
     width: 380px;
+    
+    @media (max-width: 1199px) {
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 766px) {
+        margin-bottom: 10px;
+        flex-direction: column;
+        gap: 10px;
+        width: 77px;
+        height: 70px;
+    }
+}
+
+.contacts-data-content.location{
+    margin-bottom: 60px;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 766px) {
+        margin-bottom: 20px;
+        width: 77px;
+        height: 27px;
+    }
+}
+
+.contacts-data-content-icon{
+    margin-bottom: 20px;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 15px;
+        width: 24px;
+        height: 24px;
+    }
+
+    @media (max-width: 766px) {
+        margin-bottom: 5px;
+        width: 14px;
+        height: 14px;
+    }
 }
 
 .contacts-data-content-text {
-    padding-top: 20px;
     font-weight: 700;
     font-size: 25px;
     letter-spacing: 0.03em;
     color: #fff;
+
+    @media (max-width: 1199px) {
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    @media (max-width: 766px) {
+        font-size: 9px;
+    }
+}
+
+.contacts-map-image{
+    display: none;
+
+    @media (max-width: 766px) {
+        display: flex;
+        width: 180px;
+        height: 109px;
+    }
+}
+
+.contacts-map{
+    @media (max-width: 766px) {
+        display: none;
+    }
 }
 
 .contacts-map iframe{
     border-radius: 10px;
+    @media (max-width: 1199px) {
+        width: 363px;
+        height: 235px;
+    }
 }

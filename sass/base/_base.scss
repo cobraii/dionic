@@ -84,6 +84,16 @@ ul {
     align-items: center;
     justify-content: center;
 	width: 100%;
+	
+	@media (max-width: 1199px) {
+		padding: 70px 20px;
+		display: block;
+    }
+
+	@media (max-width: 766px) {
+		padding: 40px 20px;
+    }
+	
 }
 
 
@@ -98,6 +108,13 @@ ul {
 	font-size: 16px;
 	letter-spacing: 0.05em;
 	color: #f8f9fb;
+
+	@media (max-width: 766px) {
+		width: 104px;
+		height: 26px;
+		font-size: 9px;
+    }
+
 }
 
 .reserve-button:hover{
@@ -110,8 +127,31 @@ ul {
 	font-size: 16px;
 	letter-spacing: 0.05em;
 	color: #f8f9fb;
+
+	@media (max-width: 766px) {
+		font-size: 9px;
+    }
 }
 
 .contact-myself-button:hover{
 	font-weight: 700;
+}
+
+.section-title{
+	margin-bottom: 80px;
+    font-weight: 700;
+    font-size: 55px;
+	line-height: 122%;
+    text-transform: uppercase;
+    color: #f8f9fb;
+
+	@media (max-width: 1199px) {
+        margin-bottom: 55px;
+		font-size: 45px;
+    }
+
+	@media (max-width: 766px) {
+		margin-bottom: 20px;
+		font-size: 20px;
+    }
 }

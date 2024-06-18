@@ -89,67 +89,120 @@
             </div>
         </div> -->
         
-        <main class="main" id="main">
+        <main class="main " id="main">
+            <div class="block">
+                <ul class="nav-links">
+                    <li class="nav-links-el"><a href="#main">Главная</a></li>
+                    <li class="nav-links-el"><a href="#advantages">Преимущества</a></li>
+                    <li class="nav-links-el"><a href="#hotel-number">Номера</a></li>
+                    <li class="nav-links-el"><a href="#contacts">Контакты</a></li>
+                </ul>
+                <div class="block-data">
+                    <div class="block-data-connection">
+                        <div class="block-data-content">
+                            <img class="block-data-content-icon" src="./img/contacts/phone.svg" alt="Phone">
+                            <p class="block-data-content-text">+7 940 714-14-43</p>
+                        </div>
+                        <div class="block-data-content">
+                            <img class="block-data-content-icon" src="./img/contacts/whatsapp.svg" alt="WhatsApp">
+                            <p class="block-data-content-text">WhatsApp</p>
+                        </div>
+                    </div>
+                    <div class="block-data-content location">
+                        <a href="https://yandex.ru/maps/?ol=geo&text=%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%91.%20%D0%90%D0%B4%D0%BB%D0%B5%D0%B9%D0%B1%D0%B0%2C%20235&sll=40.964399%2C42.989991&sspn=0.006027%2C0.008211">
+                            <img class="block-data-content-icon" src="./img/contacts/location.svg" alt="Location">
+                            <p class="block-data-content-text">Адлейба 239</p>
+                        </a>
+                    </div>
+                </div>
+                <button class="block-prev">Назад</button>
+            </div>
             <nav class="layout">
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <div class="nav-container">
-                    <ul class="nav-links">
+                    <ul class="nav-links nav-links-header">
                         <li class="nav-links-el"><a href="#main">Главная</a></li>
                         <li class="nav-links-el"><a href="#advantages">Преимущества</a></li>
                         <li class="nav-links-el"><a href="#hotel-number">Номера</a></li>
                         <li class="nav-links-el"><a href="#contacts">Контакты</a></li>
                     </ul>
                     <div class="nav-logo">
-                        <a href="./index.html"><img src="./img/logo.png" alt="Logo"></a>
+                        <a href="./index.html"><img src="./img/logo.svg" alt="Logo"></a>
                     </div>
                 </div>
             </nav>
             <div class="main-content">
                 <h1 class="main-content-title">Идеальное место для отдыха</h1>
                 <p class="main-content-text">Для тех, кто мечтает об уединенном отдыхе на природе, не уезжая далеко от городской суеты</p>
-                <button class="reserve-button">Забронировать</button>
-                <button class="contact-myself-button">Связаться самому</button>
+                <div>
+                    <button class="reserve-button">Забронировать</button>
+                    <button class="contact-myself-button">Связаться самому</button>
+                </div>
             </div>
         </main>
 
-        <section class="advantages section" id="advantages">
+        <section class="advantages section " id="advantages">
             <div class="advantages-wrapper">
-                <h2 class="advantages-title">Наши клиенты всегда довольны</h2>
-                <div class="advantages-content">
-                <div class="advantages-content-item">
-                    <img class="advantages-content-item-image" src="./img/advantages/room.png" alt="Room">
-                    <div class="advantages-content-item-info">
-                        <h3 class="advantages-content-item-info-title">Комфортные номера</h3>
-                        <p class="advantages-content-item-info-text">Со всем необходимым для прекрасного отдыха. В каждом установлены телевизоры, кондиционеры, а также WiFi. В ванных комнатах также есть косметические принадлежности и комплект полотенец. </p>
-                    </div>
-                    <button class="reserve-button">Забронировать</button>
-                    <button class="contact-myself-button">Связаться самому</button>
+                <div class="advantages-title">
+                    <h2 class="section-title">Наши клиенты всегда довольны</h2>
                 </div>
-                <div class="advantages-content-item">
-                    <img class="advantages-content-item-image" src="./img/advantages/sea.png" alt="Sea">
-                    <div class="advantages-content-item-info">
-                        <h3 class="advantages-content-item-info-title">Собственный пляж</h3>
-                        <p class="advantages-content-item-info-text">В шаговой доступности от территории комплекса есть охраняемый пляж, оборудованный зонтами и шезлонгами. Здесь вы можете насладиться теплым солнцем и окунуться в прохладное море</p>
+                <div class="swiper-container advantages-content">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide-advantages">
+                            <div class="advantages-content-item">
+                                <img class="advantages-content-item-image" src="./img/advantages/room.png" alt="Room">
+                                <div class="advantages-content-item-info">
+                                <h3 class="advantages-content-item-info-title">Комфортные номера</h3>
+                                <p class="advantages-content-item-info-text">Со всем необходимым для прекрасного отдыха. В каждом установлены телевизоры, кондиционеры, а также WiFi. В ванных комнатах также есть косметические принадлежности и комплект полотенец. </p>
+                                </div>
+                                <div>
+                                    <button class="reserve-button">Забронировать</button>
+                                    <button class="contact-myself-button">Связаться самому</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-advantages">
+                        <div class="advantages-content-item">
+                            <img class="advantages-content-item-image" src="./img/advantages/sea.png" alt="Sea">
+                            <div class="advantages-content-item-info">
+                            <h3 class="advantages-content-item-info-title">Собственный пляж</h3>
+                            <p class="advantages-content-item-info-text">В шаговой доступности от территории комплекса есть охраняемый пляж, оборудованный зонтами и шезлонгами. Здесь вы можете насладиться теплым солнцем и окунуться в прохладное море</p>
+                            </div>
+                            <div>
+                                <button class="reserve-button">Забронировать</button>
+                                <button class="contact-myself-button">Связаться самому</button>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="swiper-slide swiper-slide-advantages">
+                        <div class="advantages-content-item">
+                            <img class="advantages-content-item-image" src="./img/advantages/grill-zone.png" alt="Grill zona">
+                            <div class="advantages-content-item-info">
+                            <h3 class="advantages-content-item-info-title">Зона BBQ</h3>
+                            <p class="advantages-content-item-info-text">Уютное место для дружеских, а может даже романтических вечеров. Тут можно насладиться воздухом, не отказывая себе в удобствах современного мира. Ну, а для любителей шашлыка есть зоны BBQ.</p>
+                            </div>
+                            <div>
+                                <button class="reserve-button">Забронировать</button>
+                                <button class="contact-myself-button">Связаться самому</button>
+                            </div>
+                        </div>
+                        </div>
                     </div>
-                    <button class="reserve-button">Забронировать</button>
-                    <button class="contact-myself-button">Связаться самому</button>
+                    <div class="swiper-scrollbar swiper-advantages-scrollbar"></div>
+                    <div class="swiper-pagination swiper-advantages-pagination"></div>
                 </div>
-                <div class="advantages-content-item">
-                    <img class="advantages-content-item-image" src="./img/advantages/grill-zone.png" alt="Grill zona">
-                    <div class="advantages-content-item-info">
-                        <h3 class="advantages-content-item-info-title">Зона BBqv</h3>
-                        <p class="advantages-content-item-info-text">Уютное место для дружеских, а может даже романтических вечеров. Тут можно насладиться воздухом, не отказывая себе в удобствах современного мира. Ну, а для любителей шашлыка есть зоны BBQ.</p>
-                    </div>
-                    <button class="reserve-button">Забронировать</button>
-                    <button class="contact-myself-button">Связаться самому</button>
-                </div>
-
-            </div>
             </div>
         </section>
 
-        <section class="hotel-number section" id="hotel-number">
+        <section class="hotel-number section " id="hotel-number">
             <div class="hotel-number-wrapper">
-                <h2 class="hotel-number-title">Живите с комфортом</h2>
+                <div class="hotel-number-title">
+                    <h2 class="section-title">Живите с комфортом</h2>
+                </div>
                 <div class="swiper-container swiper-hotel-number">
                     <div class="swiper-wrapper ">
                         <div class="swiper-slide swiper-slide-hotel-number">
@@ -262,7 +315,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide swiper-slide-hotel-number">
+                        <div class="swiper-slide swiper-slide-hotel-number slide-adaptiv" >
                             <div class="hotel-number-content">
                                 <div class="hotel-number-content-image">
                                     <div class="swiper-container swiper-hotel-number-image">
@@ -319,7 +372,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="swiper-slide swiper-slide-hotel-number">
+                        <div class="swiper-slide swiper-slide-hotel-number slide-adaptiv">
                             <div class="hotel-number-content">
                                 <div class="hotel-number-content-image">
                                     <div class="swiper-container swiper-hotel-number-image">
@@ -381,10 +434,12 @@
             </div>
         </section>
 
-        <section class="sauna section">
+        <section class="sauna section ">
             <div class="sauna-wrapper">
-                <div class="sauna-info ">
-                    <h2 class="sauna-info-title">Сауна для вас</h2>
+                <div class="sauna-info">
+                    <div class="sauna-info-title">
+                        <h2 class="section-title section-title-sauna">Сауна для вас</h2>
+                    </div>
                     <p class="sauna-info-text">
                         У гостей “Диониса” есть возможность посетить сауну, расположенную прямо на территории комплекса. Там есть все необходимое для приятного и полезного времяпрепровождения: эвкалиптовые веники, шапочки и даже комната отдыха. После можно окунуться в купель с холодной водой.
                     </p>
@@ -408,18 +463,20 @@
                             <div class="swiper-slide swiper-slide-sauna">
                                 <img src="./img/sauna/bathhouse-4.png" alt="Bathhouse">
                             </div>
-
                         </div>
 
                         <div class="swiper-pagination swiper-sauna-pagination"></div>
         
                     </div>  
                 </div>
+                <h2 class="section-title section-title-sauna-tablet">Сауна для вас</h2>
             </div>
         </section>
 
-        <section class="photo section">
-            <h2 class="photo-title">Вот, что ждет наших гостей</h2>
+        <section class="photo section ">
+            <div class="photo-section-title">
+                <h2 class="section-title">Вот, что ждет наших гостей</h2>
+            </div>
             <div class="swiper-container swiper-photo">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide swiper-slide-photo">
@@ -440,6 +497,11 @@
                     <div class="swiper-slide swiper-slide-photo">
                         <div class="swiper-slide-photo-image">
                             <img src="./img/photo/image-4.png" alt="House">
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-photo">
+                        <div class="swiper-slide-photo-image">
+                            <img src="./img/photo/image-5.png" alt="House">
                         </div>
                     </div>
                     <div class="swiper-slide swiper-slide-photo">
@@ -465,28 +527,37 @@
             </div>
         </section>  
 
-        <section class="contacts section" id="contacts">
+        <section class="contacts section " id="contacts">
             <div class="contacts-wrapper">
-                <h2 class="contacts-title">МЫ всегда рады гостям</h2>
+                <h2 class="section-title contacts-title">МЫ всегда рады гостям</h2>
                 <div class="contacts-row">
                     <div class="contacts-data">
-                        <div class="contacts-data-content">
-                            <img src="./img/contacts/phone.svg" alt="Phone">
-                            <p class="contacts-data-content-text">+7 940 714-14-43</p>
-                        </div>
-                        <div class="contacts-data-content">
-                            <img src="./img/contacts/whatsapp.svg" alt="WhatsApp">
-                            <p class="contacts-data-content-text">WhatsApp</p>
+                        <div class="contacts-data-connection">
+                            <div class="contacts-data-content">
+                                <img class="contacts-data-content-icon" src="./img/contacts/phone.svg" alt="Phone">
+                                <p class="contacts-data-content-text">+7 940 714-14-43</p>
+                            </div>
+                            <div class="contacts-data-content">
+                                <img class="contacts-data-content-icon" src="./img/contacts/whatsapp.svg" alt="WhatsApp">
+                                <p class="contacts-data-content-text">WhatsApp</p>
+                            </div>
                         </div>
                         <div class="contacts-data-content location">
-                            <img src="./img/contacts/location.svg" alt="Location">
-                            <p class="contacts-data-content-text">Адлейба 239</p>
+                            <a href="https://yandex.ru/maps/?ol=geo&text=%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%91.%20%D0%90%D0%B4%D0%BB%D0%B5%D0%B9%D0%B1%D0%B0%2C%20235&sll=40.964399%2C42.989991&sspn=0.006027%2C0.008211">
+                                <img class="contacts-data-content-icon" src="./img/contacts/location.svg" alt="Location">
+                                <p class="contacts-data-content-text">Адлейба 239</p>
+                            </a>
                         </div>
                         <button class="reserve-button">Забронировать</button>
                     </div>
                     <div class="contacts-map-container">
+                        <div class="contacts-map-image">
+                            <a href="https://yandex.ru/maps/?ol=geo&text=%D1%83%D0%BB%D0%B8%D1%86%D0%B0%20%D0%91.%20%D0%90%D0%B4%D0%BB%D0%B5%D0%B9%D0%B1%D0%B0%2C%20235&sll=40.964399%2C42.989991&sspn=0.006027%2C0.008211">
+                                <img  src="./img/contacts/map.png" alt="Map">
+                            </a>    
+                        </div>
                         <div class="contacts-map">
-                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac47e749f40b52db32cd97010be8807b3d67450e216cc961f1117b21458d8bbd7&amp;width=587&amp;height=310&amp;lang=ru_RU&amp;scroll=true"></script>
+                            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac47e749f40b52db32cd97010be8807b3d67450e216cc961f1117b21458d8bbd7&amp;width=587&amp;height=335&amp;lang=ru_RU&amp;scroll=true"></script>
                         </div>
                     </div>
                 </div>
@@ -494,25 +565,32 @@
         </section>
 
         <footer class="footer">
-            <nav class="layout">
+            <nav class="layout layout-footer">
                 <div class="nav-container">
-                    <ul class="nav-links">
+                    <ul class="nav-links nav-links-footer">
                         <li class="nav-links-el"><a href="#main">Главная</a></li>
                         <li class="nav-links-el"><a href="#advantages">Преимущества</a></li>
                         <li class="nav-links-el"><a href="#hotel-number">Номера</a></li>
                         <li class="nav-links-el"><a href="#contacts">Контакты</a></li>
                     </ul>
-                    <p class="nav-container-rights">Все права © защищены</p>
+                </div>
+                <div class="footer-content">
+                    <p class="footer-content-text">Получите свой сайт от AIA Group</p>
+                    <p class="footer-content-number">+7 940-945-39-07</p>
+                    <div class="footer-social-networks">
+                        <img class="footer-social-networks-icon" src="./img/contacts/whatsapp.svg" alt="WhatsApp">
+                        <img class="footer-social-networks-icon" src="./img/contacts/telegram.svg" alt="Telegram">
+                    </div>
                 </div>
             </nav>
-            <div class="footer-content">
-                <p class="footer-content-text">Получите свой сайт от AIA Group</p>
-                <p class="footer-content-number">+7 940-945-39-07</p>
-                <div class="footer-social-networks">
-                    <img class="footer-social-networks-icon" src="./img/contacts/whatsapp.svg" alt="WhatsApp">
-                    <img src="./img/contacts/telegram.svg" alt="Telegram">
+            <div class="footer-rights">
+                <p class="footer-rights-text">Все права © защищены</p>
+                <div class="nav-logo nav-logo-footer">
+                    <a href="./index.html"><img src="./img/logo.svg" alt="Logo"></a>
                 </div>
             </div>
+
+            
         </footer>
 
     </div>

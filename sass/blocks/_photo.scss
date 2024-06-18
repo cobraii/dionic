@@ -1,6 +1,11 @@
 .photo{
     padding-top: 0;
-    flex-direction: column;
+}
+
+.photo-wrapper{
+    @media (max-width: 766px) {
+		width: 280px;
+    }
 }
 
 .photo-section-title{

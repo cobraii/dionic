@@ -15,6 +15,10 @@
         flex-direction: column-reverse;
         align-items: flex-start;
     }
+
+    @media (max-width: 766px) {
+        width: 280px;
+    }
 }
 
 .sauna-info{

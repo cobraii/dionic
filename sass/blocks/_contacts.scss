@@ -6,6 +6,17 @@
     @media (max-width: 1199px) {
         background-image: url('/dionic/img/contacts/image-bg-tablet.png');
     }
+
+    @media (max-width: 766px) {
+        display: flex;
+        padding-top: 0;
+    }
+}
+
+.contacts-wrapper{
+    @media (max-width: 766px) {
+        width: 280px;
+    }
 }
 
 .contacts-title{

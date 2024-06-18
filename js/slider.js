@@ -122,6 +122,9 @@ function initMobileSwiper() {
             spaceBetween: 50,
             speed: 700,
             loop: true,
+            autoplay: {
+                delay: 5000,
+            },
             pagination: {
                 el: nestedSwiperContainer.querySelector('.swiper-image-pagination'),
                 clickable: true,

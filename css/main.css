@@ -73,8 +73,7 @@ ul {
   width: 100%; }
   @media (max-width: 1199px) {
     .section {
-      padding: 70px 20px;
-      display: block; } }
+      padding: 70px 20px; } }
   @media (max-width: 766px) {
     .section {
       padding: 40px 20px; } }
@@ -216,7 +215,7 @@ ul {
 
 .block-data-content-text {
   font-weight: 400;
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 0.03em;
   color: #fff; }
 
@@ -226,7 +225,7 @@ ul {
   border-radius: 100px;
   background: #058240;
   font-weight: 400;
-  font-size: 9px;
+  font-size: 14px;
   letter-spacing: 0.05em;
   color: #f8f9fb; }
 
@@ -250,7 +249,7 @@ ul {
   text-transform: uppercase; }
   @media (max-width: 766px) {
     .nav-links-el {
-      font-size: 9px; } }
+      font-size: 14px; } }
 
 .nav-links-el:hover {
   font-weight: 700;
@@ -274,7 +273,7 @@ ul {
   @media (max-width: 766px) {
     .main-content {
       padding: 30px 0;
-      padding-left: 26px; } }
+      padding-left: 30px; } }
 
 .main-content-title {
   width: 820px;
@@ -466,6 +465,9 @@ ul {
     .sauna-wrapper {
       flex-direction: column-reverse;
       align-items: flex-start; } }
+  @media (max-width: 766px) {
+    .sauna-wrapper {
+      width: 280px; } }
 
 .sauna-info {
   margin-right: 155px; }
@@ -689,8 +691,11 @@ ul {
     display: none; } }
 
 .photo {
-  padding-top: 0;
-  flex-direction: column; }
+  padding-top: 0; }
+
+@media (max-width: 766px) {
+  .photo-wrapper {
+    width: 280px; } }
 
 @media (max-width: 766px) {
   .photo-section-title {
@@ -766,6 +771,14 @@ ul {
   @media (max-width: 1199px) {
     .contacts {
       background-image: url("/dionic/img/contacts/image-bg-tablet.png"); } }
+  @media (max-width: 766px) {
+    .contacts {
+      display: flex;
+      padding-top: 0; } }
+
+@media (max-width: 766px) {
+  .contacts-wrapper {
+    width: 280px; } }
 
 .contacts-title {
   width: 520px; }
@@ -949,7 +962,7 @@ ul {
   @media (max-width: 766px) {
     .footer-rights-text {
       padding-top: 10px;
-      font-size: 9px; } }
+      font-size: 12px; } }
 
 .nav-logo-footer {
   padding-top: 30px; }

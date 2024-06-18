@@ -553,7 +553,7 @@ ul {
       padding-top: 0; } }
 
 .hotel-number-wrapper {
-  overflow-x: hidden; }
+  overflow: hidden; }
   @media (max-width: 1199px) {
     .hotel-number-wrapper {
       width: 650px; } }
@@ -574,7 +574,7 @@ ul {
   position: relative;
   width: 650px;
   height: 420px;
-  overflow-x: hidden; }
+  overflow: hidden; }
   @media (max-width: 766px) {
     .hotel-number-content {
       width: 280px;
@@ -602,7 +602,7 @@ ul {
   bottom: 20px;
   left: 40px;
   z-index: 10;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: max-height 0.3s ease; }
   @media (max-width: 766px) {
     .hotel-number-info-wrapper {

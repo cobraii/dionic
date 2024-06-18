@@ -100,7 +100,7 @@ function initMobileSwiper() {
     const mainSwiper = new Swiper('.swiper-container.swiper-hotel-number', {
         slidesPerView: 'auto',
         centeredSlides: false,
-        allowTouchMove: false,
+        allowTouchMove: true,
         loop: false,
         spaceBetween: 15,
         breakpoints: {
@@ -111,8 +111,8 @@ function initMobileSwiper() {
         effect: 'slide',
         initialSlide: 0,
         direction: 'vertical',
-        // touchStartPreventDefault: false, // Добавляем этот параметр
-        // touchReleaseOnEdges: true, // Добавляем этот параметр
+        touchStartPreventDefault: false, // Добавляем этот параметр
+        touchReleaseOnEdges: true, // Добавляем этот параметр
     });
 
     const nestedSwipers = document.querySelectorAll('.swiper-container.swiper-hotel-number-image');

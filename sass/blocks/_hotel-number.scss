@@ -14,7 +14,7 @@
 }
 
 .hotel-number-wrapper {
-    overflow-x: hidden;
+    overflow: hidden;
     
     @media (max-width: 1199px) {
         width: 650px;
@@ -41,7 +41,7 @@
     position: relative;
     width: 650px;
     height: 420px;
-    overflow-x: hidden; 
+    overflow: hidden; 
 
     @media (max-width: 766px) {
         width: 280px;
@@ -75,7 +75,7 @@
     bottom: 20px;
     left: 40px;
     z-index: 10;
-    overflow-x: hidden; 
+    overflow: hidden; 
     transition: max-height 0.3s ease;
     
     @media (max-width: 766px) {

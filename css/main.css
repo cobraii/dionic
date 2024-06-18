@@ -693,13 +693,17 @@ ul {
 .photo {
   padding-top: 0; }
 
-@media (max-width: 766px) {
-  .photo-wrapper {
-    width: 280px; } }
+.photo-wrapper {
+  overflow: hidden; }
+  @media (max-width: 766px) {
+    .photo-wrapper {
+      width: 280px; } }
 
-@media (max-width: 766px) {
-  .photo-section-title {
-    width: 280px; } }
+.photo-section-title {
+  text-align: center; }
+  @media (max-width: 766px) {
+    .photo-section-title {
+      width: 280px; } }
 
 .swiper-container.swiper-photo {
   position: relative;
@@ -765,6 +769,7 @@ ul {
   display: none; }
 
 .contacts {
+  padding-top: 0;
   display: block;
   background-image: url("/dionic/img/contacts/image-bg.png");
   background-size: cover; }
@@ -780,11 +785,12 @@ ul {
   .contacts-wrapper {
     width: 280px; } }
 
-.contacts-title {
-  width: 520px; }
-  @media (max-width: 766px) {
-    .contacts-title {
-      width: 275px; } }
+@media (max-width: 1199px) {
+  .contacts-title {
+    width: 520px; } }
+@media (max-width: 766px) {
+  .contacts-title {
+    width: 275px; } }
 
 .contacts-row {
   display: flex; }

@@ -83,12 +83,6 @@ function initDesktopSwiper() {
             if (infoWrapper) {
                 infoWrapper.style.display = 'none';
             }
-
-            // Находим вложенные Swiper в активном слайде и обновляем их пагинацию
-            const nestedSwiper = slide.querySelector('.swiper-container.swiper-hotel-number-image');
-            if (nestedSwiper && nestedSwiper.swiper) {
-                nestedSwiper.swiper.pagination.update();
-            }
         });
 
         const activeSlide = swiper.slides[swiper.activeIndex];
@@ -96,6 +90,12 @@ function initDesktopSwiper() {
             const activeInfoWrapper = activeSlide.querySelector('.hotel-number-info-wrapper');
             if (activeInfoWrapper) {
                 activeInfoWrapper.style.display = 'block';
+            }
+
+            // Находим вложенные Swiper в активном слайде и обновляем их пагинацию
+            const nestedSwiper = activeSlide.querySelector('.swiper-container.swiper-hotel-number-image');
+            if (nestedSwiper && nestedSwiper.swiper) {
+                nestedSwiper.swiper.pagination.update();
             }
         }
     }

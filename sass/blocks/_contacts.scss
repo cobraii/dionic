@@ -113,23 +113,29 @@
     }
 }
 
-.contacts-map-image{
+.contacts-map-mobile {
     display: none;
-
+    
     @media (max-width: 766px) {
-        max-width: 240px;
         display: block;
     }
+}
+
+.contacts-map-mobile iframe{
+    border-radius: 10px;
+    max-width: 200px;
+    height: 120px;
 }
 
 .contacts-map{
     @media (max-width: 766px) {
         display: none;
-    }
+     }
 }
 
 .contacts-map iframe{
     border-radius: 10px;
+
     @media (max-width: 1199px) {
         width: 363px;
         height: 235px;

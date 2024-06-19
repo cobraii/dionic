@@ -99,6 +99,8 @@ function initDesktopSwiper() {
             }
         }
     }
+
+    return mainSwiper;
 }
 
 // Функция инициализации основного Swiper для мобильной версии
@@ -127,10 +129,7 @@ function initMobileSwiper() {
             slidesPerView: 'auto',
             spaceBetween: 50,
             speed: 700,
-            // loop: true,
-            // autoplay: {
-            //     delay: 5000,
-            // },
+            loop: true,
             pagination: {
                 el: '.swiper-image-pagination',
                 clickable: true,
@@ -157,6 +156,16 @@ let currentSwiper = null;
 // Функция определения ширины экрана и инициализации соответствующего Swiper 
 function handleResize() {
     if (currentSwiper) {
+        // Деактивируем вложенные Swiper перед уничтожением основного Swiper
+        if (currentSwiper.slides) {
+            currentSwiper.slides.forEach((slide) => {
+                const nestedSwiper = slide.querySelector('.swiper-container.swiper-hotel-number-image');
+                if (nestedSwiper && nestedSwiper.swiper) {
+                    nestedSwiper.swiper.destroy();
+                    nestedSwiper.swiper = null;
+                }
+            });
+        }
         currentSwiper.destroy(true, true);
     }
     

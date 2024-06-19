@@ -91,7 +91,8 @@
     color: #f8f9fb;
 
     @media (max-width: 766px) {
-        font-size: 14px;
+        max-width: 240px;
+        font-size: 9px;
     }
 }
 

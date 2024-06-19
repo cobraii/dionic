@@ -5,14 +5,15 @@
 .photo-wrapper{
     overflow: hidden;
     @media (max-width: 766px) {
-		width: 280px;
+		width: 100%;
     }
 }
 
 .photo-section-title{
     text-align: center;
+
     @media (max-width: 766px) {
-		width: 280px;
+        width: 100%;
     }  
 }
 
@@ -44,21 +45,12 @@
     }
 
     @media (max-width: 766px) {
-		width: 280px;
-        height: 186px;
+        width: 100%;
+        height: auto;
     }
 }
 
 .swiper-pagination.swiper-photo-pagination {
-
-    @media (max-width: 766px) {
-        width: 290px;
-    }
-
-    span:first-child{
-        margin-left: 0 !important;
-    }
-
     span{
         border-radius: 100px;
         width: 100px;

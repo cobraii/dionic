@@ -111,8 +111,8 @@ function initMobileSwiper() {
         effect: 'slide',
         initialSlide: 0,
         direction: 'vertical',
-        touchStartPreventDefault: false, // Добавляем этот параметр
-        touchReleaseOnEdges: true, // Добавляем этот параметр
+        // touchStartPreventDefault: false,
+        // touchReleaseOnEdges: true,
     });
 
     const nestedSwipers = document.querySelectorAll('.swiper-container.swiper-hotel-number-image');
@@ -141,17 +141,23 @@ function initMobileSwiper() {
     });
 }
 
+let currentSwiper = null;
+
 // Функция определения ширины экрана и инициализации соответствующего Swiper
 function handleResize() {
+    if (currentSwiper) {
+        currentSwiper.destroy(true, true);
+    }
+    
     if (window.innerWidth < 1200) {
-        initMobileSwiper();
+        currentSwiper = initMobileSwiper();
     } else {
-        initDesktopSwiper();
+        currentSwiper = initDesktopSwiper();
     }
 }
 
 // Инициализация Swiper при загрузке страницы
-handleResize();
+window.addEventListener('load', handleResize);
 
 // Добавление обработчика события изменения размера окна
 window.addEventListener('resize', handleResize);

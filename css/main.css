@@ -357,7 +357,7 @@ ul {
       width: 750px; } }
   @media (max-width: 766px) {
     .advantages-wrapper {
-      width: 280px; } }
+      width: 100%; } }
 
 .advantages-title {
   width: 710px; }
@@ -376,19 +376,17 @@ ul {
   margin-bottom: 40px; }
   @media (max-width: 766px) {
     .swiper-slide-advantages {
-      width: 280px !important; } }
+      width: 100% !important; } }
 
 .advantages-content-item-image {
-  height: 287px;
   border-radius: 10px; }
   @media (max-width: 766px) {
     .advantages-content-item-image {
-      width: 280px;
-      height: 190px; } }
+      width: 100%; } }
 
 @media (max-width: 766px) {
   .advantages-content-item {
-    width: 280px; } }
+    width: 100%; } }
 
 .advantages-content-item-info {
   margin: 40px 0;
@@ -396,7 +394,7 @@ ul {
   @media (max-width: 766px) {
     .advantages-content-item-info {
       margin: 15px 0;
-      width: 280px; } }
+      width: 100%; } }
 
 .advantages-content-item-info-title {
   margin-bottom: 30px;
@@ -417,7 +415,7 @@ ul {
   color: #f8f9fb; }
   @media (max-width: 766px) {
     .advantages-content-item-info-text {
-      font-size: 9px; } }
+      font-size: 14px; } }
 
 .swiper-scrollbar {
   display: none;
@@ -467,7 +465,7 @@ ul {
       align-items: flex-start; } }
   @media (max-width: 766px) {
     .sauna-wrapper {
-      width: 280px; } }
+      width: 100%; } }
 
 .sauna-info {
   margin-right: 155px; }
@@ -498,7 +496,7 @@ ul {
   @media (max-width: 766px) {
     .sauna-info-text {
       margin-bottom: 20px;
-      margin-top: 0;
+      margin-top: 15px;
       width: 248px;
       font-size: 9px; } }
 
@@ -513,8 +511,8 @@ ul {
       height: 510px; } }
   @media (max-width: 766px) {
     .sauna-image-container {
-      width: 280px;
-      height: 210px; } }
+      width: 100%;
+      height: auto; } }
 
 .swiper-slide-sauna {
   width: 650px; }
@@ -523,7 +521,7 @@ ul {
       width: 728px; } }
   @media (max-width: 766px) {
     .swiper-slide-sauna {
-      width: 280px; } }
+      width: 100%; } }
 
 .swiper-pagination.swiper-sauna-pagination {
   bottom: 0 !important; }
@@ -532,7 +530,6 @@ ul {
       width: 432px; } }
   @media (max-width: 766px) {
     .swiper-pagination.swiper-sauna-pagination {
-      bottom: 30px !important;
       width: 100%; } }
   .swiper-pagination.swiper-sauna-pagination span {
     border-radius: 100px;
@@ -561,7 +558,7 @@ ul {
       width: 650px; } }
   @media (max-width: 766px) {
     .hotel-number-wrapper {
-      width: 280px; } }
+      width: 100%; } }
 
 .hotel-number-title {
   text-align: center; }
@@ -570,7 +567,7 @@ ul {
   width: 650px !important; }
   @media (max-width: 766px) {
     .swiper-slide-hotel-number {
-      width: 280px !important; } }
+      width: 100% !important; } }
 
 .hotel-number-content {
   position: relative;
@@ -579,8 +576,8 @@ ul {
   overflow: hidden; }
   @media (max-width: 766px) {
     .hotel-number-content {
-      width: 280px;
-      height: 190px; } }
+      width: 100%;
+      height: auto; } }
 
 .hotel-number-content:hover .hotel-number-info-services {
   opacity: 1;
@@ -595,21 +592,18 @@ ul {
   border-radius: 10px; }
   @media (max-width: 766px) {
     .swiper-slide-image {
-      width: 280px !important;
-      height: 190px; } }
+      width: 100% !important;
+      height: auto; } }
 
 .hotel-number-info-wrapper {
-  padding-bottom: 40px;
   position: absolute;
   bottom: 20px;
   left: 40px;
   z-index: 10;
-  overflow: hidden;
-  transition: max-height 0.3s ease; }
+  transition: max-height 0.3s; }
   @media (max-width: 766px) {
     .hotel-number-info-wrapper {
-      padding-bottom: 20px;
-      left: 10px; } }
+      left: 20px; } }
 
 .hotel-number-info-title {
   margin-bottom: 25px;
@@ -628,7 +622,7 @@ ul {
   letter-spacing: 0.03em; }
   @media (max-width: 766px) {
     .hotel-number-info-price {
-      font-size: 13px; } }
+      font-size: 16px; } }
 
 .hotel-number-info-text {
   margin-bottom: 20px;
@@ -638,9 +632,10 @@ ul {
   color: #f8f9fb; }
   @media (max-width: 766px) {
     .hotel-number-info-text {
-      font-size: 9px; } }
+      font-size: 14px; } }
 
 .hotel-number-info-services {
+  margin-bottom: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -650,15 +645,34 @@ ul {
   opacity: 0; }
   @media (max-width: 766px) {
     .hotel-number-info-services {
-      display: none; } }
+      gap: 10px;
+      width: 100%; } }
 
 .hotel-number-info-services-item {
   display: flex;
-  gap: 10px; }
+  align-items: center;
+  gap: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  color: #f8f9fb; }
+  @media (max-width: 766px) {
+    .hotel-number-info-services-item {
+      gap: 3px;
+      font-size: 14px; } }
+
+@media (max-width: 766px) {
+  .hotel-number-info-services-item-image {
+    width: 13px;
+    height: 13px; } }
 
 .swiper-pagination.swiper-image-pagination {
-  padding-right: 35px;
-  padding-bottom: 20px; }
+  left: 20px;
+  width: 560px; }
+  @media (max-width: 766px) {
+    .swiper-pagination.swiper-image-pagination {
+      left: 10px;
+      width: 250px; } }
   .swiper-pagination.swiper-image-pagination span {
     border-radius: 100px;
     width: 100px;
@@ -697,13 +711,13 @@ ul {
   overflow: hidden; }
   @media (max-width: 766px) {
     .photo-wrapper {
-      width: 280px; } }
+      width: 100%; } }
 
 .photo-section-title {
   text-align: center; }
   @media (max-width: 766px) {
     .photo-section-title {
-      width: 280px; } }
+      width: 100%; } }
 
 .swiper-container.swiper-photo {
   position: relative;
@@ -729,14 +743,9 @@ ul {
       height: 486px; } }
   @media (max-width: 766px) {
     .swiper-slide-photo-image {
-      width: 280px;
-      height: 186px; } }
+      width: 100%;
+      height: auto; } }
 
-@media (max-width: 766px) {
-  .swiper-pagination.swiper-photo-pagination {
-    width: 290px; } }
-.swiper-pagination.swiper-photo-pagination span:first-child {
-  margin-left: 0 !important; }
 .swiper-pagination.swiper-photo-pagination span {
   border-radius: 100px;
   width: 100px;
@@ -783,7 +792,7 @@ ul {
 
 @media (max-width: 766px) {
   .contacts-wrapper {
-    width: 280px; } }
+    width: 100%; } }
 
 @media (max-width: 1199px) {
   .contacts-title {
@@ -799,22 +808,21 @@ ul {
   margin-right: 80px;
   display: flex;
   flex-wrap: wrap;
-  width: 380px; }
+  max-width: 380px; }
   @media (max-width: 1199px) {
     .contacts-data {
       margin-right: 50px;
-      width: 250px; } }
+      max-width: 250px; } }
   @media (max-width: 766px) {
     .contacts-data {
       margin-right: 30px;
-      flex-direction: column;
-      width: 77px; } }
+      flex-direction: column; } }
 
 .contacts-data-connection {
   margin-bottom: 50px;
   display: flex;
   gap: 30px;
-  width: 380px; }
+  max-width: 380px; }
   @media (max-width: 1199px) {
     .contacts-data-connection {
       margin-bottom: 30px; } }
@@ -822,9 +830,7 @@ ul {
     .contacts-data-connection {
       margin-bottom: 10px;
       flex-direction: column;
-      gap: 10px;
-      width: 77px;
-      height: 70px; } }
+      gap: 10px; } }
 
 .contacts-data-content.location {
   margin-bottom: 60px; }
@@ -833,9 +839,7 @@ ul {
       margin-bottom: 30px; } }
   @media (max-width: 766px) {
     .contacts-data-content.location {
-      margin-bottom: 20px;
-      width: 77px;
-      height: 27px; } }
+      margin-bottom: 20px; } }
 
 .contacts-data-content-icon {
   margin-bottom: 20px; }
@@ -867,9 +871,8 @@ ul {
   display: none; }
   @media (max-width: 766px) {
     .contacts-map-image {
-      display: flex;
-      width: 180px;
-      height: 109px; } }
+      max-width: 240px;
+      display: block; } }
 
 @media (max-width: 766px) {
   .contacts-map {
@@ -950,7 +953,6 @@ ul {
       width: 470px; } }
   @media (max-width: 766px) {
     .footer-rights {
-      width: 122px;
       flex-direction: column;
       justify-content: flex-start;
       align-items: end; } }

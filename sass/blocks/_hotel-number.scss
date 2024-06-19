@@ -42,7 +42,6 @@
     width: 650px;
     height: 420px;
     overflow: hidden; 
-
     @media (max-width: 766px) {
         width: 100%;
         height: auto;
@@ -62,7 +61,6 @@
     width: 650px;
     height: 420px;
     border-radius: 10px;
-
     @media (max-width: 766px) {
         width: 100% !important;
         height: auto;
@@ -103,7 +101,7 @@
     pointer-events: none;
 
     @media (max-width: 766px) {
-        font-size: 16px;
+        font-size: 13px;
     }
 }
 
@@ -117,7 +115,7 @@
 
     @media (max-width: 766px) {
         margin-bottom: 10px;
-        font-size: 14px;
+        font-size: 9px;
     }
 }
 
@@ -134,7 +132,7 @@
 
     @media (max-width: 766px) {
         gap: 10px;
-        width: 100%;
+        width: 330px;
         opacity: 1;
         max-height: none;
     }
@@ -152,7 +150,7 @@
     
     @media (max-width: 766px) {
         gap: 3px;
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 
@@ -165,9 +163,11 @@
 
 .swiper-pagination.swiper-image-pagination {
     left: 20px;
+    bottom: 20px;
     width: 560px;
 
     @media (max-width: 766px) {
+        bottom: 8px;
         left: 10px;
         width: 250px;
     }
@@ -186,10 +186,9 @@
 }
 
 .hotel-number-button{
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 60px;
-    width: 400px;
+    display: flex;
+    justify-content: center;
 
     @media (max-width: 1199px) {
         margin-top: 55px;

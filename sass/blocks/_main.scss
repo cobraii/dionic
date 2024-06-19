@@ -43,7 +43,7 @@
     display: none;
 
     @media (max-width: 1199px) {
-        padding: 20px;
+        padding: 20px 25px;
         left: 50%;
         top: -601px;
         transform: translateX(-50%);
@@ -57,6 +57,10 @@
         height: 576px;
         background: #121212;
         transition: 0.3s linear;
+    }
+
+    @media (max-width: 766px) {
+        padding-top: 10px;
     }
 }
 
@@ -120,7 +124,7 @@
     background: #058240;
 
     font-weight: 400;
-    font-size: 14px;
+    font-size: 9px;
     letter-spacing: 0.05em;
     color: #f8f9fb;
 }
@@ -148,7 +152,7 @@
     text-transform: uppercase;
 
     @media (max-width: 766px) {
-        font-size: 14px;
+        font-size: 9px;
     }
 }
 
@@ -180,7 +184,6 @@
 
     @media (max-width: 766px) {
         padding: 30px 0;
-        padding-left: 30px;
     }
 }
 
@@ -202,7 +205,6 @@
         margin-bottom: 20px;
         width: 266px;
         font-size: 26px;
-        text-align: center;
     }
 }
 
@@ -221,8 +223,7 @@
     @media (max-width: 766px) {
         margin-bottom: 20px;
         width: 266px;
-        font-size: 9px;
-        text-align: center;
+        font-size: 12px;
     }   
 }
 
@@ -254,17 +255,5 @@
     @media (max-width: 766px) {
 
     }
-
-}
-  
-.hamburger-menu.active span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);  
-}
-  
-.hamburger-menu.active span:nth-child(2) {
-    transform: rotate(-45deg) translate(1px, 0);
 }
 
-.hamburger-menu.active span:nth-child(3) {
-    display: none;
-}

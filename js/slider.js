@@ -124,13 +124,13 @@ function initMobileSwiper() {
     const nestedSwipers = document.querySelectorAll('.swiper-container.swiper-hotel-number-image');
     nestedSwipers.forEach((nestedSwiperContainer) => {
         const nestedSwiperInstance = new Swiper(nestedSwiperContainer, {
-            slidesPerView: 1,
+            slidesPerView: 'auto',
             spaceBetween: 50,
             speed: 700,
-            loop: true,
-            autoplay: {
-                delay: 5000,
-            },
+            // loop: true,
+            // autoplay: {
+            //     delay: 5000,
+            // },
             pagination: {
                 el: '.swiper-image-pagination',
                 clickable: true,

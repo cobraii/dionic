@@ -91,6 +91,12 @@ function initDesktopSwiper() {
             if (activeInfoWrapper) {
                 activeInfoWrapper.style.display = 'block';
             }
+
+            // Находим вложенный Swiper в активном слайде и обновляем его пагинацию
+            const nestedSwiper = activeSlide.querySelector('.swiper-container.swiper-hotel-number-image');
+            if (nestedSwiper && nestedSwiper.swiper) {
+                nestedSwiper.swiper.pagination.update();
+            }
         }
     }
 }
@@ -105,19 +111,19 @@ function initMobileSwiper() {
         spaceBetween: 15,
         breakpoints: {
             760: {
-              spaceBetween: 35
+                spaceBetween: 35
             },
         },
         effect: 'slide',
         initialSlide: 0,
         direction: 'vertical',
-        // touchStartPreventDefault: false,
-        // touchReleaseOnEdges: true,
+        touchStartPreventDefault: false,
+        touchReleaseOnEdges: true,
     });
 
     const nestedSwipers = document.querySelectorAll('.swiper-container.swiper-hotel-number-image');
     nestedSwipers.forEach((nestedSwiperContainer) => {
-        new Swiper(nestedSwiperContainer, {
+        const nestedSwiperInstance = new Swiper(nestedSwiperContainer, {
             slidesPerView: 1,
             spaceBetween: 50,
             speed: 700,
@@ -130,6 +136,9 @@ function initMobileSwiper() {
                 clickable: true,
             },
         });
+
+        // Обновляем пагинацию после инициализации вложенного Swiper
+        nestedSwiperInstance.pagination.update();
     });
 
     // Показываем блоки информации для всех слайдов
@@ -139,6 +148,8 @@ function initMobileSwiper() {
             infoWrapper.style.display = 'block';
         }
     });
+
+    return mainSwiper; // Возвращаем экземпляр основного Swiper для использования в handleResize()
 }
 
 let currentSwiper = null;
@@ -161,7 +172,6 @@ window.addEventListener('load', handleResize);
 
 // Добавление обработчика события изменения размера окна
 window.addEventListener('resize', handleResize);
-
 
 new Swiper('.swiper-container.advantages-content', {
     slidesPerView: 'auto',

@@ -132,7 +132,7 @@ function initMobileSwiper() {
                 delay: 5000,
             },
             pagination: {
-                el: nestedSwiperContainer.querySelector('.swiper-image-pagination'),
+                el: '.swiper-image-pagination',
                 clickable: true,
             },
         });

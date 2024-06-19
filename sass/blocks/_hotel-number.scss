@@ -51,14 +51,14 @@
 
 .hotel-number-content:hover .hotel-number-info-services{
     opacity: 1;
-    max-height:  400px;
+    max-height: 400px;
 }
 
 .swiper-slide-image:hover .hotel-number-info-wrapper {
     max-height: auto;
 }
 
-.swiper-slide-image{
+.swiper-slide-image {
     width: 650px;
     height: 420px;
     border-radius: 10px;
@@ -69,13 +69,14 @@
     }
 }
 
-.hotel-number-info-wrapper{
+.hotel-number-info-wrapper {
     position: absolute;
     bottom: 20px;
     left: 40px;
     z-index: 10;
     transition: max-height 0.3s;
-    
+    pointer-events: none;
+
     @media (max-width: 766px) {
         left: 20px;
     }
@@ -87,6 +88,7 @@
     font-size: 33px;
     text-transform: uppercase;
     color: #f8f9fb;
+    pointer-events: none;
 
     @media (max-width: 766px) {
         margin-bottom: 10px;
@@ -98,11 +100,11 @@
     font-weight: 700;
     font-size: 25px;
     letter-spacing: 0.03em;
+    pointer-events: none;
 
     @media (max-width: 766px) {
         font-size: 16px;
     }
-    
 }
 
 .hotel-number-info-text {
@@ -111,8 +113,10 @@
     font-size: 25px;
     letter-spacing: 0.03em;
     color: #f8f9fb;
+    pointer-events: none;
 
     @media (max-width: 766px) {
+        margin-bottom: 10px;
         font-size: 14px;
     }
 }
@@ -126,10 +130,13 @@
     max-height: 0;
     transition: opacity 0.3s, max-height 0.3s;
     opacity: 0;
+    pointer-events: none;
 
     @media (max-width: 766px) {
         gap: 10px;
         width: 100%;
+        opacity: 1;
+        max-height: none;
     }
 }
 
@@ -137,7 +144,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-
+    pointer-events: none;
     font-weight: 400;
     font-size: 16px;
     letter-spacing: 0.03em;

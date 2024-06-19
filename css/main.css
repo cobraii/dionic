@@ -115,7 +115,6 @@ ul {
   margin-bottom: 80px;
   font-weight: 700;
   font-size: 55px;
-  line-height: 122%;
   text-transform: uppercase;
   color: #f8f9fb; }
   @media (max-width: 1199px) {
@@ -210,7 +209,6 @@ ul {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 80px;
-  line-height: 106%;
   text-transform: uppercase; }
   @media (max-width: 1199px) {
     .main-content-title {
@@ -280,7 +278,7 @@ ul {
       transition: 0.3s linear; } }
   @media (max-width: 766px) {
     .block {
-      padding-top: 10px; } }
+      padding-top: 15px; } }
 
 .block.block--active {
   top: 0; }
@@ -392,7 +390,6 @@ ul {
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 33px;
-  line-height: 206%;
   text-transform: uppercase;
   color: #f8f9fb; }
   @media (max-width: 766px) {
@@ -431,6 +428,7 @@ ul {
   background: #f8f9fb; }
 
 .swiper-pagination.swiper-advantages-pagination {
+  bottom: 0;
   display: none;
   width: 145px; }
   .swiper-pagination.swiper-advantages-pagination span {
@@ -534,15 +532,20 @@ ul {
         width: 40px; } }
 
 .hotel-number {
+  padding: 130px 0;
   background-image: url("/dionic/img/hotel-number/image-bg.png");
   background-size: cover; }
   @media (max-width: 1199px) {
     .hotel-number {
       padding-bottom: 0;
+      padding-left: 40px;
+      padding-right: 40px;
       background-image: none; } }
   @media (max-width: 766px) {
     .hotel-number {
-      padding-top: 0; } }
+      padding-top: 0;
+      padding-left: 20px;
+      padding-right: 20px; } }
 
 .hotel-number-wrapper {
   overflow: hidden; }
@@ -588,6 +591,36 @@ ul {
       width: 100% !important;
       height: auto; } }
 
+.image-overlay-container {
+  position: relative;
+  display: inline-block; }
+
+.image-overlay-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 30, 30, 0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease; }
+  @media (max-width: 766px) {
+    .image-overlay-container::after {
+      opacity: 1 !important; } }
+
+.image-overlay-container:hover::after {
+  opacity: 1; }
+  @media (max-width: 1199px) {
+    .image-overlay-container:hover::after {
+      opacity: 1 !important; } }
+
+.swiper-slide:not(.swiper-slide-active) .image-overlay-container::after {
+  opacity: 1; }
+  @media (max-width: 1199px) {
+    .swiper-slide:not(.swiper-slide-active) .image-overlay-container::after {
+      opacity: 0; } }
+
 .hotel-number-info-wrapper {
   position: absolute;
   bottom: 20px;
@@ -600,7 +633,7 @@ ul {
       left: 20px; } }
 
 .hotel-number-info-title {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 33px;
   text-transform: uppercase;
@@ -608,7 +641,7 @@ ul {
   pointer-events: none; }
   @media (max-width: 766px) {
     .hotel-number-info-title {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       font-size: 18px; } }
 
 .hotel-number-info-price {
@@ -629,10 +662,11 @@ ul {
   pointer-events: none; }
   @media (max-width: 766px) {
     .hotel-number-info-text {
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       font-size: 9px; } }
 
 .hotel-number-info-services {
+  padding-top: 10px;
   margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -757,6 +791,7 @@ ul {
   background: #f8f9fb; }
   @media (max-width: 766px) {
     .swiper-pagination.swiper-photo-pagination span {
+      margin: 0 2px !important;
       width: 38px; } }
 
 .swiper-photo-prev,
@@ -782,7 +817,6 @@ ul {
   display: none; }
 
 .contacts {
-  padding-top: 0;
   display: block;
   background-image: url("/dionic/img/contacts/image-bg.png");
   background-size: cover; }
@@ -791,8 +825,7 @@ ul {
       background-image: url("/dionic/img/contacts/image-bg-tablet.png"); } }
   @media (max-width: 766px) {
     .contacts {
-      display: flex;
-      padding-top: 0; } }
+      display: flex; } }
 
 @media (max-width: 766px) {
   .contacts-wrapper {

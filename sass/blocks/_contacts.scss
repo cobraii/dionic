@@ -1,5 +1,4 @@
 .contacts {
-    padding-top: 0;
     display: block;
     background-image: url('/dionic/img/contacts/image-bg.png');
     background-size: cover;
@@ -10,7 +9,6 @@
 
     @media (max-width: 766px) {
         display: flex;
-        padding-top: 0;
     }
 }
 

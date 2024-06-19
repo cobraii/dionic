@@ -1,6 +1,10 @@
 .sauna{
-    padding: 70px 0;
+    padding: 130px 0;
     padding-left: 20px;
+
+    @media (max-width: 1199px) {
+        padding: 70px 20px;
+    }
 
     @media (max-width: 766px) {
         padding: 40px 20px;

@@ -154,7 +154,7 @@ function initMobileSwiper() {
 
 let currentSwiper = null;
 
-// Функция определения ширины экрана и инициализации соответствующего Swiper
+// Функция определения ширины экрана и инициализации соответствующего Swiper 
 function handleResize() {
     if (currentSwiper) {
         currentSwiper.destroy(true, true);

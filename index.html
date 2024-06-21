@@ -14,82 +14,81 @@
 </head>
 <body>
     <div class="container">
-        <!-- <div class="flutter section none">
+        <div class="flutter none">
             <div class="section-content-form">
                 <form class="form" id="form">
-                    <div class="form-title-wrapper">
-                        <h3 class="form-title">Это будет незабываемый отдых</h3>
-                        <img class="form-close" src="./img/svg/close.svg" alt="Close">
-                    </div>
-                    <div class="form-content-human-data">
-                        <h4 class="form-content-human-data-step">Шаг 1/3</h4>
-                        <div class="form-data">
-                            <input class="form-data-input" id="form-name" type="text" placeholder="Имя">
-                            <input class="form-data-input" id="form-surname" type="text" placeholder="Фамилия">
-                            <input class="form-data-input" id="form-phone" type="tel" placeholder="Телефон">
-                        </div>
-                        <div class="form-button">
-                            <button class="form-button-continued" >Продолжить</button>
-                            <p class="form-button-text">Нажимая на кнопку, я даю разрешение на обработку данных</p>
-                        </div>
-                    </div>
-                    <div class="form-content-info-data none">
-                        <h4 class="form-content-human-data-step">Шаг 2/3</h4>
-                        <div class="form-data">
-                            <label class="checkbox-block">
-                                <input type="checkbox" name="radio-group" class="checkbox-block__real">
-                                <div class="checkbox-block__fake"></div>
-                                <div class="checkbox-block__text">Нужен трансфер</div>
-                            </label>    
-                            <label class="checkbox-block">
-                                <input type="checkbox" name="radio-group" class="checkbox-block__real">
-                                <div class="checkbox-block__fake"></div>
-                                <div class="checkbox-block__text">Я с питомцами</div>
-                            </label>    
-                            <label class="checkbox-block">
-                                <input type="checkbox" name="radio-group" class="checkbox-block__real">
-                                <div class="checkbox-block__fake"></div>
-                                <div class="checkbox-block__text">Нужна парковка</div>
-                            </label>    
-                        </div>
-                        <div class="form-button">
-                            <button class="form-button-continued" >Продолжить</button>
-                            <p class="form-button-text">Нажимая на кнопку, я даю разрешение на обработку данных</p>
-                        </div>
-                    </div>
-                    <div class="form-content-dates-arrival none">
-                        <h4 class="form-content-human-data-step">Шаг 3/3</h4>
-                        <div class="form-data ">
+                    <div class="form-content-dates-arrival">
+                        <div class="form-dates-arrival">
+                            <h3 class="form-content-title">Пожалуйста, укажите дату</h3>
                             <div class="form-data-input-date-wrapper">
-                                <input class="form-data-input-date" id="form-name" type="date" placeholder="Заезд">
-                                <input class="form-data-input-date" id="form-surname" type="date" placeholder="Выезд">
+                                <div class="form-group-input-data" id="arrivalContainer">
+                                    <span class="label">Заезд: </span>
+                                    <span id="dateDisplayArrival" class="date-display">01.06.24</span>
+                                    <input type="date" id="form-checkIn" class="date-input">
+                                </div>
+                                <div class="form-group-input-data" id="departureContainer">
+                                    <span class="label">Выезд: </span>
+                                    <span id="dateDisplayDeparture" class="date-display">01.06.24</span>
+                                    <input type="date" id="form-checkOut" class="date-input">
+                                </div>
                             </div>
-                            <div class="form-order-call-checkbox">
-                                <p class="form-order-call-checkbox-title" data-checkbox="telegram">Позвоните мне</p>
-                                <button class="toggle-button">
-                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M18.9994 0.973267L0.999427 0.973266C0.817186 0.973839 0.638551 1.02419 0.482751 1.1189C0.326951 1.21362 0.199886 1.3491 0.115232 1.51078C0.030578 1.67245 -0.00845786 1.8542 0.00232437 2.03644C0.0131066 2.21869 0.0733006 2.39454 0.176427 2.54507L9.17643 15.5683C9.54943 16.1083 10.4474 16.1083 10.8214 15.5683L19.8214 2.54507C19.9256 2.39486 19.9867 2.21892 19.9981 2.03637C20.0094 1.85382 19.9706 1.67164 19.8859 1.50962C19.8012 1.3476 19.6738 1.21194 19.5175 1.11738C19.3612 1.02282 19.182 0.972979 18.9994 0.973267Z" fill="#453C41" />
-                                      </svg>
-                                </button>
-                                <div class="form-order-call-block none">
-                                    <ul class="form-order-call-list">
-                                        <li class="call" data-value="Мне удобней звонок">Позвоните мне</li>
-                                        <li class="whatsapp" data-value="Мне удобней WhatsApp">WhatsApp</li>
-                                        <li class="telegram" data-value="Мне удобней Telegram">Telegram</li>
-                                    </ul>
+                            <div class="select">
+                                <h3 class="form-content-title">Как нам связаться с вами?</h3>
+                                <div class="form-order-call-select-container">
+                                    <div class="form-order-call-select-container-button">
+                                        <h4 class="form-order-call-checkbox-title" data-checkbox="Звонок">Звонок</h4>
+                                        <button class="toggle-button">
+                                            <svg viewBox="0 0 17 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.5 9.12006L1.08633 0.228377C1.02658 0.155171 0.955649 0.0972948 0.877637 0.0580988C0.799625 0.0189027 0.716081 -0.00083592 0.631839 2.66753e-05C0.547597 0.00088927 0.464331 0.0223356 0.386858 0.0631237C0.309385 0.103912 0.239244 0.163232 0.180494 0.237652C0.121744 0.312072 0.0755517 0.400113 0.0445898 0.496682C0.0136279 0.593251 -0.00148863 0.696431 0.000115004 0.800248C0.00171864 0.904065 0.0200106 1.00646 0.0539324 1.10151C0.0878541 1.19655 0.136732 1.28236 0.197738 1.35397L8.05571 10.7776C8.17465 10.9202 8.33405 11 8.5 11C8.66595 11 8.82535 10.9202 8.94429 10.7776L16.8023 1.35397C16.8633 1.28236 16.9121 1.19655 16.9461 1.1015C16.98 1.00646 16.9983 0.904065 16.9999 0.800247C17.0015 0.69643 16.9864 0.59325 16.9554 0.496681C16.9244 0.400113 16.8783 0.312071 16.8195 0.237651C16.7608 0.163231 16.6906 0.103911 16.6131 0.063123C16.5357 0.0223348 16.4524 0.000888575 16.3682 2.59874e-05C16.2839 -0.0008366 16.2004 0.018902 16.1224 0.0580981C16.0443 0.0972941 15.9734 0.15517 15.9137 0.228377L8.5 9.12006Z" fill="#F8F9FB" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="form-order-call-block none">
+                                        <ul class="form-order-call-list">
+                                            <li class="call" data-value="Звонок">Звонок</li>
+                                            <li class="whatsapp" data-value="Telegram">Telegram</li>
+                                            <li class="telegram" data-value="WhatsApp">WhatsApp</li>
+                                            <li class="telegram" data-value="E-mail">E-mail</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="form-button">
-                            <button class="form-button-continued verify">Подтвердить</button>
-                            <p class="form-button-text">Нажимая на кнопку, я даю разрешение на обработку данных</p>
+                            <button class="form-button-continued">Далее</button>
+                            <button class="form-button-cancel">Отмена</button>
                         </div>
                     </div>
+                    
+                    <div class="form-content-human-data none">
+                        <h3 class="form-content-title">Пожалуйста, укажите дату</h3>
+                        <div class="form-human-data">
+                            <input class="form-data-input" id="form-name" type="text" placeholder="Имя" required>
+                            <input class="form-data-input" id="form-surname" type="text" placeholder="Фамилия" required>
+                            <input pattern="^\+7[1-9]{10}$" class="form-data-input" id="form-phone" type="phone" placeholder="Номер" required>
+                            <input class="form-data-input" id="form-email" type="email" placeholder="E-mail" required>
+                        </div>
+                        <div class="form-button">
+                            <button class="form-button-reserve" >Забронировать</button>
+                            <button class="form-button-prev">Назад</button>
+                        </div>
+                        <p class="form-button-text">Нажимая на кнопку, я даю разрешение на обработку данных</p>
+                    </div>
+                      
                 </form>
             </div>
-        </div> -->
+            <div class="thanks-modal-wrapper none">
+                <div class="thanks-modal">
+                    <img class="thanks-modal-img" src="/img/thanks.svg" alt="Thanks">
+                    <div class="thanks-modal-text">
+                        <h3 class="thanks-modal-text-title">Благодарим!</h3>
+                        <p>Ваша заявка поступила. Ожидайте ответ.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
         
-        <main class="main " id="main">
+        <main class="main" id="main">
             <div class="block">
                 <ul class="nav-links">
                     <li class="nav-links-el"><a href="#main">Главная</a></li>
@@ -104,7 +103,9 @@
                             <p class="block-data-content-text">+7 940 714-14-43</p>
                         </div>
                         <div class="block-data-content">
-                            <img class="block-data-content-icon" src="./img/contacts/whatsapp.svg" alt="WhatsApp">
+                            <a href="https://wa.me/+79407141443">
+                                <img class="block-data-content-icon" src="./img/contacts/whatsapp.svg" alt="WhatsApp">
+                            </a>
                             <p class="block-data-content-text">WhatsApp</p>
                         </div>
                     </div>
@@ -145,7 +146,7 @@
             </div>
         </main>
 
-        <section class="advantages section " id="advantages">
+        <section class="advantages section" id="advantages">
             <div class="advantages-wrapper">
                 <div class="advantages-title">
                     <h2 class="section-title">Наши клиенты всегда довольны</h2>
@@ -198,7 +199,7 @@
             </div>
         </section>
 
-        <section class="hotel-number section " id="hotel-number">
+        <section class="hotel-number section" id="hotel-number">
             <div class="hotel-number-wrapper">
                 <div class="hotel-number-title">
                     <h2 class="section-title">Живите с комфортом</h2>
@@ -466,7 +467,7 @@
             </div>
         </section>
 
-        <section class="sauna section ">
+        <section class="sauna section">
             <div class="sauna-wrapper">
                 <div class="sauna-info">
                     <div class="sauna-info-title">
@@ -505,7 +506,7 @@
             </div>
         </section>
 
-        <section class="photo section ">
+        <section class="photo section">
             <div class="photo-wrapper">
                 <div class="photo-section-title">
                     <h2 class="section-title">Вот, что ждет наших гостей</h2>
@@ -561,7 +562,7 @@
             </div>
         </section>  
 
-        <section class="contacts section " id="contacts">
+        <section class="contacts section" id="contacts">
             <div class="contacts-wrapper">
                 <h2 class="section-title contacts-title">МЫ всегда рады гостям</h2>
                 <div class="contacts-row">
@@ -571,10 +572,12 @@
                                 <img class="contacts-data-content-icon" src="./img/contacts/phone.svg" alt="Phone">
                                 <p class="contacts-data-content-text">+7 940 714-14-43</p>
                             </div>
-                            <div class="contacts-data-content">
-                                <img class="contacts-data-content-icon" src="./img/contacts/whatsapp.svg" alt="WhatsApp">
-                                <p class="contacts-data-content-text">WhatsApp</p>
-                            </div>
+                            <a href="https://wa.me/+79407141443">
+                                <div class="contacts-data-content">
+                                    <img class="contacts-data-content-icon" src="./img/contacts/whatsapp.svg" alt="WhatsApp">
+                                    <p class="contacts-data-content-text">WhatsApp</p>
+                                </div>
+                            </a>
                         </div>
                         <div class="contacts-data-content location">
                             <img class="contacts-data-content-icon" src="./img/contacts/location.svg" alt="Location">
@@ -608,7 +611,9 @@
                     <p class="footer-content-text">Получите свой сайт от AIA Group</p>
                     <p class="footer-content-number">+7 940-945-39-07</p>
                     <div class="footer-social-networks">
-                        <img class="footer-social-networks-icon" src="./img/contacts/whatsapp.svg" alt="WhatsApp">
+                        <a href="https://wa.me/+79407141443">
+                            <img class="footer-social-networks-icon" src="./img/contacts/whatsapp.svg" alt="WhatsApp">
+                        </a>
                         <img class="footer-social-networks-icon" src="./img/contacts/telegram.svg" alt="Telegram">
                     </div>
                 </div>

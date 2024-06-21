@@ -129,7 +129,7 @@ ul {
 .main {
   padding: 0 130px;
   width: 100%;
-  background-image: url("/img/main-bg.png");
+  background-image: url("/dionic/img/main-bg.png");
   background-size: cover;
   color: #ecf1f7; }
   @media (max-width: 1599px) {
@@ -821,7 +821,7 @@ ul {
 
 .contacts {
   display: block;
-  background-image: url("/img/contacts/image-bg.png");
+  background-image: url("/dionic/img/contacts/image-bg.png");
   background-size: cover; }
   @media (max-width: 1199px) {
     .contacts {

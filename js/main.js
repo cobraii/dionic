@@ -45,6 +45,7 @@ function formApplication(){
 
 function formOrderCall() {
     const ordeCallBlock = document.querySelector('.form-order-call-block')
+    const form = document.querySelector('.form')
     document.querySelector('.form-order-call-select-container-button').addEventListener('click', (e) =>{
         e.preventDefault()
         if (ordeCallBlock.classList.contains('none')) {

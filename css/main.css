@@ -1224,7 +1224,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   @media (max-width: 766px) {
     .form-order-call-list {
       gap: 6px;
-      font-size: 12px; } }
+      font-size: 9px; } }
 
 .form-order-call-list li:hover {
   color: red; }

@@ -1208,13 +1208,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background: #121212; }
   @media (max-width: 766px) {
     .form-order-call-block {
-      width: 70px;
-      top: 38px; } }
+      width: 80px;
+      top: 35px; } }
 
 .form-order-call-list {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 20px;
+  padding: 12px 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1225,7 +1223,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer; }
   @media (max-width: 766px) {
     .form-order-call-list {
-      padding-left: 15px;
+      padding: 8px 15px;
       gap: 6px;
       font-size: 9px; } }
 

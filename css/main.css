@@ -1043,13 +1043,14 @@ ul {
   padding: 50px;
   width: 472px;
   height: auto;
+  border-radius: 10px;
   background: #121212;
   overflow-y: hidden; }
   @media (max-width: 766px) {
     .form {
-      padding: 30px;
-      padding-bottom: 50px;
-      width: 328px; } }
+      padding: 20px;
+      padding-bottom: 40px;
+      width: 230px; } }
 
 .form-button {
   display: flex;
@@ -1057,7 +1058,7 @@ ul {
   gap: 20px; }
   @media (max-width: 766px) {
     .form-button {
-      gap: 15px; } }
+      gap: 10px; } }
 
 .form-content-title {
   width: 375px;
@@ -1068,9 +1069,9 @@ ul {
   color: #f8f9fb; }
   @media (max-width: 766px) {
     .form-content-title {
-      margin-bottom: 25px;
-      width: 270px;
-      font-size: 18px; } }
+      margin-bottom: 15px;
+      width: 200px;
+      font-size: 13px; } }
 
 .form-data-input-date-wrapper {
   margin-bottom: 50px;
@@ -1079,8 +1080,8 @@ ul {
   gap: 20px; }
   @media (max-width: 766px) {
     .form-data-input-date-wrapper {
-      margin-bottom: 35px;
-      gap: 40px; } }
+      margin-bottom: 20px;
+      gap: 10px; } }
 
 .form-group-input-data {
   padding-left: 20px;
@@ -1093,7 +1094,7 @@ ul {
   border-radius: 10px; }
   @media (max-width: 766px) {
     .form-group-input-data {
-      padding-left: 13px;
+      padding-left: 9px;
       width: 95px;
       height: 32px; } }
 
@@ -1146,7 +1147,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-bottom: 40px; }
   @media (max-width: 766px) {
     .select {
-      margin-bottom: 25px; } }
+      margin-bottom: 20px; } }
 
 .form-order-call-select-container {
   padding-left: 20px;
@@ -1161,8 +1162,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   @media (max-width: 766px) {
     .form-order-call-select-container {
       padding-left: 15px;
-      width: 122px;
-      height: 39px; } }
+      width: 95px;
+      height: 32px; } }
 
 .form-order-call-select-container-button {
   display: flex;
@@ -1176,15 +1177,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background: transparent; }
   @media (max-width: 766px) {
     .toggle-button {
-      padding-top: 2px; } }
+      padding-top: 0; } }
 
 .toggle-button svg {
   width: 17px;
   height: 11px; }
   @media (max-width: 766px) {
     .toggle-button svg {
-      width: 14px;
-      height: 9px; } }
+      width: 9px;
+      height: 6px; } }
 
 .form-order-call-checkbox-title {
   margin-right: 15px;
@@ -1195,7 +1196,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   @media (max-width: 766px) {
     .form-order-call-checkbox-title {
       margin-right: 5px;
-      font-size: 12px; } }
+      font-size: 9px; } }
 
 .form-order-call-block {
   position: absolute;
@@ -1207,8 +1208,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background: #121212; }
   @media (max-width: 766px) {
     .form-order-call-block {
-      width: 100px;
-      top: 45px; } }
+      width: 70px;
+      top: 38px; } }
 
 .form-order-call-list {
   padding-top: 12px;
@@ -1224,6 +1225,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer; }
   @media (max-width: 766px) {
     .form-order-call-list {
+      padding-left: 15px;
       gap: 6px;
       font-size: 9px; } }
 

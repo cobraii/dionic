@@ -1202,16 +1202,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   left: 0;
   top: 55px;
   width: 120px;
-  height: 160px;
   border: 1px solid #f8f9fb;
   border-radius: 10px;
   background: #121212; }
   @media (max-width: 766px) {
     .form-order-call-block {
+      width: 100px;
       top: 45px; } }
 
 .form-order-call-list {
   padding-top: 12px;
+  padding-bottom: 12px;
   padding-left: 20px;
   display: flex;
   flex-direction: column;

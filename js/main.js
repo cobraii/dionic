@@ -8,6 +8,8 @@ const humanData = document.querySelector('.form-content-human-data');
 const titleText = document.querySelector(".form-order-call-checkbox-title");
 const thanksModalWrapper = document.querySelector('.thanks-modal-wrapper');
 
+let currentStep = 0;
+
 buttonReserve.forEach(item => {
     item.addEventListener('click', () => {
         flutter.classList.remove('none');
@@ -15,46 +17,66 @@ buttonReserve.forEach(item => {
     });
 });
 
+function updateForm(steps, currentStep, prevButton) {
+    steps.forEach((step, index) => {
+        step.classList.toggle('none', index !== currentStep);
+    });
+    prevButton.classList.toggle('none', currentStep === 0);
+}
+
 function formApplication() {
     const form = document.querySelector('.form');
     const steps = Array.from(form.querySelectorAll('.form-content-dates-arrival, .form-content-number-human, .form-content-human-data'));
     const prevButton = form.querySelector('.form-button-prev');
-    let currentStep = 0;
 
-    const updateForm = () => {
-        steps.forEach((step, index) => {
-            step.classList.toggle('none', index !== currentStep);
-        });
-        prevButton.classList.toggle('none', currentStep === 0);
-    };
     form.addEventListener('click', (event) => {
         if (event.target.closest('.form-button-continued')) {
-            event.preventDefault(); 
-            if (currentStep === 0){
-                if (titleText.innerText !== 'E-mail') {
-                    document.querySelector("#form-email").style.display = 'none';
-                    document.querySelector("#form-phone").style.display = 'block';
-                } else {
-                    document.querySelector("#form-phone").style.display = 'none';
+            event.preventDefault();
+            if (validateStep(currentStep)) {
+                if (currentStep === 0) {
+                    if (titleText.innerText !== 'E-mail') {
+                        document.querySelector("#form-email").style.display = 'none';
+                        document.querySelector("#form-phone").style.display = 'block';
+                    } else {
+                        document.querySelector("#form-phone").style.display = 'none';
+                    }
                 }
+                currentStep++;
+                updateForm(steps, currentStep, prevButton);
+                document.querySelector('.error-message').classList.remove('active')
+            } else {
+                document.querySelector('.error-message').classList.add('active')
             }
-            currentStep++;
-            updateForm();
         } else if (event.target.closest('.form-button-prev')) {
-            event.preventDefault(); 
+            event.preventDefault();
             if (currentStep > 0) {
                 currentStep--;
-                updateForm();
+                updateForm(steps, currentStep, prevButton);
+                document.querySelector('.error-message').classList.remove('active')
             }
         } else if (event.target.closest('.form-button-cancel')) {
             event.preventDefault();
-            flutter.classList.add('none')
-            document.body.style.overflow = 'visible'
-            currentStep = 0
-            updateForm();
+            flutter.classList.add('none');
+            document.body.style.overflow = 'visible';
+            currentStep = 0;
+            updateForm(steps, currentStep, prevButton);
         }
     });
-    updateForm();
+    updateForm(steps, currentStep, prevButton);
+}
+
+function validateStep(step) {
+    switch (step) {
+        case 0:
+            return inputs.checkIn.value.trim() !== '' && inputs.checkOut.value.trim() !== '';
+        case 1:
+            return inputs.adults.value.trim() !== '' && inputs.kids.value.trim() !== '';
+        case 2:
+            return inputs.firstname.value.trim() !== '' && inputs.lastname.value.trim() !== '' &&
+                (inputs.email.value.trim() !== '' || inputs.phone.value.trim() !== '');
+        default:
+            return false;
+    }
 }
 
 function formOrderCall() {
@@ -200,7 +222,6 @@ function addRequest(formInputs) {
     
     let connectionMethod = connections[formInputs.connection.textContent.trim()];
     let roomCategoryMethod = roomCategory[formInputs.roomCategory.textContent.trim()];
-
     let requestData = {
         firstname: formInputs.firstname.value.trim(),
         lastname: formInputs.lastname.value.trim(),
@@ -235,7 +256,13 @@ async function sendRequestToServer(request) {
         });
 
         if (response.ok) {
-            document.querySelector('.form').reset();  
+            document.querySelector('.form').reset();
+            currentStep = 0;
+            const form = document.querySelector('.form');
+            const steps = Array.from(form.querySelectorAll('.form-content-dates-arrival, .form-content-number-human, .form-content-human-data'));
+            const prevButton = form.querySelector('.form-button-prev');
+            updateForm(steps, currentStep, prevButton); // обновим форму для первого шага
+
             document.querySelector('#dateDisplayArrival').textContent = '01.06.24';
             document.querySelector('#dateDisplayDeparture').textContent = '01.06.24';
             document.querySelector('#dateDisplayArrival').style.color = '#3e3e3e';
@@ -243,7 +270,7 @@ async function sendRequestToServer(request) {
             document.querySelector('.form-order-call-checkbox-title').textContent = 'Звонок';
             inputs.connection = document.querySelector(".form-order-call-checkbox-title");
             contentForm.classList.add('none');
-            thanksModalWrapper.classList.remove('none');  
+            thanksModalWrapper.classList.remove('none');
 
             const closeThanksModal = (event) => {
                 if (!thanksModalWrapper.contains(event.target)) {
@@ -253,10 +280,9 @@ async function sendRequestToServer(request) {
                     datesArrival.classList.remove('none');
                     flutter.classList.add('none');
                     document.body.style.overflow = 'visible';
-                    document.removeEventListener('click', closeThanksModal); 
+                    document.removeEventListener('click', closeThanksModal);
                 }
             };
-
             document.addEventListener('click', closeThanksModal);
         } else {
             const errorData = await response.json();
@@ -269,14 +295,19 @@ async function sendRequestToServer(request) {
 
 document.querySelector('.form-button-reserve').addEventListener('click', async (e) => {
     e.preventDefault();
+    if (validateStep(currentStep)){
+        const request = addRequest(inputs);
+        console.log('Request data:', request);
+        await sendRequestToServer(request);
+        document.querySelector('.error-message').classList.remove('active')
+    } else{
+        document.querySelector('.error-message').classList.add('active')
+    }
     
-    const request = addRequest(inputs);
-    console.log('Request data:', request); 
-    await sendRequestToServer(request);
 });
 
 hamburgerMenuView();
 formApplication();
 formOrderCall();
-formSelectNumber()
+formSelectNumber();
 scroll();

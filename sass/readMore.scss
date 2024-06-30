@@ -722,6 +722,7 @@ ul {
     width: 100%;
 	height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: fixed;
@@ -732,6 +733,47 @@ ul {
     backdrop-filter: blur(6px);
     background: rgba(62, 62, 62, 0.8);
 
+}
+
+.error-message {
+    z-index: 10;
+    padding: 15px;
+    width: 400px;
+    position: absolute;
+    top: 30%;
+    opacity: 0;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    color: #721c24;
+    transition: 0.3s linear;
+
+    @media (max-width: 1599px) {
+        top: 25%;
+    }
+
+    @media (max-width: 1199px) {
+        top: 20%;
+    }
+
+    @media (max-width: 766px) {
+        padding: 10px;
+        width: 217px;
+        top: 30%;
+    }
+}
+
+.error-message.active{
+    opacity: 1;
+}
+
+.error-text{
+    @media (max-width: 766px) {
+        font-size: 9px;
+    }
+}
+
+.section-content-form{
 }
 
 .form {
@@ -991,6 +1033,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 }
 
+.form-button-continued:hover{
+    border: 1px solid #f8f9fb;
+}
+
 .form-button-cancel {
     background: transparent;
 	font-weight: 400;
@@ -1001,6 +1047,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     @media (max-width: 766px) {
         font-size: 9px;
     }
+}
+
+.form-button-cancel:hover{
+    font-weight: 700;
 }
 
 .form-content-number-human {
@@ -1062,6 +1112,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background: transparent;
 
     @media (max-width: 766px) {
+        padding-top: 1px;
         font-size: 9px;
     }
 }
@@ -1221,6 +1272,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 }
 
+.form-button-reserve:hover{
+    border: 1px solid #f8f9fb;
+}
+
+
 .form-button-prev {
     background: transparent;
     font-weight: 400;
@@ -1232,6 +1288,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     @media (max-width: 766px) {
         font-size: 9px;
     }
+}
+
+.form-button-prev:hover{
+    font-weight: 700;
 }
 
 .form-button-text {

@@ -56,6 +56,11 @@
 .hotel-number-content:hover .hotel-number-info-services{
     opacity: 1;
     max-height: 500px;
+
+    @media (max-width: 1199px) {
+        opacity: 0;
+        max-height: 0;
+    }
 }
 
 .swiper-slide-image:hover .hotel-number-info-wrapper {
@@ -90,18 +95,22 @@
     transition: opacity 0.3s ease;
     
     @media (max-width: 1199px) {
-        opacity: 1;
+        opacity: 0;
     }
 }
 
 .image-overlay-container:hover::after {
     opacity: 1;
-    
+    @media (max-width: 1199px) {
+        opacity: 0;
+    }
 }
 
 .swiper-slide:not(.swiper-slide-active) .image-overlay-container::after {
     opacity: 1;
-
+    @media (max-width: 1199px) {
+        opacity: 0;
+    }
 }
 
 .hotel-number-info-wrapper {
@@ -112,7 +121,12 @@
     transition: max-height 0.3s;
     pointer-events: none;
 
+    @media (max-width: 1199px) {
+        bottom: 40px;
+    }
+
     @media (max-width: 766px) {
+        bottom: 30px;
         left: 20px;
     }
 }
@@ -169,14 +183,7 @@
     pointer-events: none;
 
     @media (max-width: 1199px) {
-        max-height: none;
-        opacity: 1;
-    }
-
-    @media (max-width: 766px) {
-        margin-bottom: 20px;
-        gap: 10px;
-        width: 330px;
+        display: none;
     }
 }
 

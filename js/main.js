@@ -54,21 +54,7 @@ function formApplication() {
             updateForm();
         }
     });
-    // document.querySelector('.form-button-continued').addEventListener('click', (e) => {
-    //     e.preventDefault();
-    //     datesArrival.classList.add('none');
-    //     humanData.classList.remove('none');
-
-    // });
-
-    // document.querySelector('.form-button-prev').addEventListener('click', (e) => {
-    //     e.preventDefault();
-    //     datesArrival.classList.remove('none');
-    //     humanData.classList.add('none');
-    //     document.querySelector("#form-email").style.display = '';
-    // });
     updateForm();
-
 }
 
 function formOrderCall() {
@@ -165,6 +151,9 @@ const inputs = {
     phone: document.getElementById("form-phone"),
     email: document.getElementById("form-email"),
     connection: document.querySelector(".form-order-call-checkbox-title"),
+    adults: document.getElementById("adults-number"),
+    kids: document.getElementById("kids-number"),
+    roomCategory: document.querySelector(".select-number-container-title"),
 };
 
 class Request {
@@ -180,15 +169,18 @@ class Request {
         if (data.phone) {
             this.phone = data.phone;
         }
+        this.adults = data.adults
+        this.kids = data.kids
+        this.roomCategory = data.roomCategory
     }
 }
 
 function formatPhone(phoneNumber) {
     let cleaned = phoneNumber.replace(/\D/g, '');
     if (cleaned.startsWith('7')) {
-        return '8' + cleaned.substr(1);
-    } else if (cleaned.startsWith('+7')) {
-        return '8' + cleaned.substr(2);
+        return '+7' + cleaned.substr(1);
+    } else if (cleaned.startsWith('8')) {
+        return '+7' + cleaned.substr(1);
     }
     return cleaned;
 }
@@ -200,14 +192,23 @@ function addRequest(formInputs) {
         'WhatsApp': 'BY_WHATS_APP',
         'E-mail': 'BY_EMAIL',
     };
+
+    const roomCategory = {
+        'Стандарт': 'STANDARD',
+        'Люкс': 'LUX',
+    };
     
     let connectionMethod = connections[formInputs.connection.textContent.trim()];
+    let roomCategoryMethod = roomCategory[formInputs.roomCategory.textContent.trim()];
 
     let requestData = {
         firstname: formInputs.firstname.value.trim(),
         lastname: formInputs.lastname.value.trim(),
         checkIn: formInputs.checkIn.value.trim(),
         checkOut: formInputs.checkOut.value.trim(),
+        adults: formInputs.adults.value.trim(),
+        kids: formInputs.kids.value.trim(),
+        roomCategory: roomCategoryMethod,
         connection: connectionMethod,
     };
 
@@ -224,7 +225,7 @@ function addRequest(formInputs) {
 
 async function sendRequestToServer(request) {
     try {
-        const response = await fetch('http://147.45.164.79/api/create/client', {
+        const response = await fetch('http://147.45.164.78/api/create/client', {
             method: 'POST',
             headers: {
                 'Accept': '*/*',

@@ -582,6 +582,10 @@ ul {
 .hotel-number-content:hover .hotel-number-info-services {
   opacity: 1;
   max-height: 500px; }
+  @media (max-width: 1199px) {
+    .hotel-number-content:hover .hotel-number-info-services {
+      opacity: 0;
+      max-height: 0; } }
 
 .swiper-slide-image:hover .hotel-number-info-wrapper {
   max-height: auto; }
@@ -611,13 +615,19 @@ ul {
   transition: opacity 0.3s ease; }
   @media (max-width: 1199px) {
     .image-overlay-container::after {
-      opacity: 1; } }
+      opacity: 0; } }
 
 .image-overlay-container:hover::after {
   opacity: 1; }
+  @media (max-width: 1199px) {
+    .image-overlay-container:hover::after {
+      opacity: 0; } }
 
 .swiper-slide:not(.swiper-slide-active) .image-overlay-container::after {
   opacity: 1; }
+  @media (max-width: 1199px) {
+    .swiper-slide:not(.swiper-slide-active) .image-overlay-container::after {
+      opacity: 0; } }
 
 .hotel-number-info-wrapper {
   position: absolute;
@@ -626,8 +636,12 @@ ul {
   z-index: 5;
   transition: max-height 0.3s;
   pointer-events: none; }
+  @media (max-width: 1199px) {
+    .hotel-number-info-wrapper {
+      bottom: 40px; } }
   @media (max-width: 766px) {
     .hotel-number-info-wrapper {
+      bottom: 30px;
       left: 20px; } }
 
 .hotel-number-info-title {
@@ -676,13 +690,7 @@ ul {
   pointer-events: none; }
   @media (max-width: 1199px) {
     .hotel-number-info-services {
-      max-height: none;
-      opacity: 1; } }
-  @media (max-width: 766px) {
-    .hotel-number-info-services {
-      margin-bottom: 20px;
-      gap: 10px;
-      width: 330px; } }
+      display: none; } }
 
 .hotel-number-info-services-item {
   display: flex;

@@ -250,7 +250,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .form-order-call-list li:hover{
-    color: red;
+    color: #058240;
 }
 
 .form-button-continued {
@@ -285,12 +285,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .form-content-number-human {
     padding: 50px;
+
+    @media (max-width: 766px) {
+        padding: 20px;
+    }
 }
 
 .form-data-input-number-wrapper {
     margin-bottom: 50px;
     display: flex;
     gap: 20px;
+
+    @media (max-width: 766px) {
+        margin-bottom: 20px;
+        gap: 10px;
+    }
 }
 
 .form-group-input-number {
@@ -304,6 +313,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 51px;
     border: 1px solid #f8f9fb;
     border-radius: 10px;
+
+    @media (max-width: 766px) {
+        padding-left: 9px;
+        width: 95px;
+        height: 32px;
+        
+    }
 }
 
 .label-info-number {
@@ -311,6 +327,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 16px;
     letter-spacing: 0.03em;
     color: #f8f9fb;
+
+    @media (max-width: 766px) {
+        font-size: 9px;
+    }
 }
 
 .number-input{
@@ -320,6 +340,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     letter-spacing: 0.03em;
     color: #f8f9fb;
     background: transparent;
+
+    @media (max-width: 766px) {
+        font-size: 9px;
+    }
 }
 
 .select-number {
@@ -343,10 +367,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     @media (max-width: 766px) {
         padding-left: 15px;
-        width: 95px;
+        width: 85px;
         height: 32px;
     }
 }
+
 .select-number-container-button {
     display: flex;
     align-items: center;
@@ -421,10 +446,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .select-number-list li:hover{
-    color: red;
+    color: #058240;
 }
-
-
 
 .form-human-data {
     margin-bottom: 40px;

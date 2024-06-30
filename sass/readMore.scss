@@ -87,11 +87,26 @@ ul {
     @media (max-width: 1599px) {
         padding: 0 60px;
     }
+
+    @media (max-width: 1199px) {
+        padding: 0 20px;
+        max-width: 1024px;
+    }
 }
 
 .layout.header{
     height: 91px;
     align-items: center;
+
+    @media (max-width: 1199px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media (max-width: 766px) {
+        height: 47px;
+    }
 }
 
 .nav-container{
@@ -99,6 +114,10 @@ ul {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
+    @media (max-width: 1199px) {
+        width: auto;
+    }
 }
 
 .nav-links.nav-links-header{
@@ -122,6 +141,12 @@ ul {
         gap: 15px;
     }
 }
+.nav-links-header{
+    @media (max-width: 1199px) {
+        display: none;
+    }
+}
+
 
 .nav-links-el {
     font-weight: 400;
@@ -151,15 +176,152 @@ ul {
     height: 62px;
     border-radius: 100px;
     background-color: #f8f9fb;
+
     @media (max-width: 1199px) {
-        width: 120px;
+        width: 160px;
     }
 
     @media (max-width: 766px) {
-        width: 55px;
+        width: 67px;
+        height: 23px;
+    }
+    img{
+        @media (max-width: 1199px) {
+            width: 100px;
+        }
+    
+        @media (max-width: 766px) {
+            width: 45px;
+        }
     }
 }
 
+.nav-logo-footer{
+    margin-top: -25px;
+
+    @media (max-width: 1199px) {
+        margin-top: -17px;
+    }
+
+    @media (max-width: 766px) {
+        margin-top: 15px;
+    }
+}
+
+.hamburger-menu {
+    width: 36px;
+    height: 33px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  
+    @media (max-width: 1199px) {
+      display: flex;
+    }
+
+    @media (max-width: 766px) {
+        gap: 5px;
+        width: 20px;
+        height: 17px;
+    }
+}
+  
+.hamburger-menu span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 10px;
+    background-color: #f8f9fb;
+}
+
+.block{
+    display: none;
+
+    @media (max-width: 1199px) {
+        padding: 20px 25px;
+        left: 50%;
+        top: -601px;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        z-index: 20;
+        
+        width: 100%;
+        height: 576px;
+        background: #121212;
+        transition: 0.3s linear;
+    }
+
+    @media (max-width: 766px) {
+        padding-top: 15px;
+    }
+}
+
+.block.block--active {
+    top: 0;   
+}
+
+.block-data {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 766px) {
+        padding-top: 40px;
+    }
+}
+
+.block-data-connection{
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 766px) {
+        margin-bottom: 15px;
+        gap: 10px;
+    }
+}
+
+.block-data-content.location{
+    margin-bottom: 40px;
+    
+    @media (max-width: 766px) {
+        margin-bottom: 20px;
+    }
+}
+
+.block-data-content-icon{
+    width: 18px;
+    height: 18px;
+    margin-bottom: 10px;
+
+    @media (max-width: 766px) {
+        width: 14px;
+        height: 14px;
+        margin-bottom: 7px;
+    }
+}
+
+.block-data-content-text {
+    font-weight: 400;
+    font-size: 9px;
+    letter-spacing: 0.03em;
+    color: #fff;
+}
+
+.block-prev{
+    width: 58px;
+    height: 26px;
+    border-radius: 100px;
+    background: #058240;
+
+    font-weight: 400;
+    font-size: 9px;
+    letter-spacing: 0.05em;
+    color: #f8f9fb;
+}
 
 .hotel-number {
 	padding: 80px 130px;
@@ -169,20 +331,46 @@ ul {
     justify-content: center;
     gap: 130px;
     width: 100%;
+
     @media (max-width: 1599px) {
         padding: 80px 60px;
+    }
+
+    @media (max-width: 1199px) {
+        padding: 50px 20px;
+        gap: 70px;
+    }
+
+    @media (max-width: 766px) {
+        padding: 25px 20px;
+        gap: 40px;
     }
 }
 
 .hotel-number-wrapper {
     width: 1330px;
     overflow-x: hidden;
+
+    @media (max-width: 1199px) {
+        width: 728px;
+    }
+
+    @media (max-width: 766px) {
+        width: 100%;
+    }
 }
 
 .swiper-standart{
     margin-bottom: 80px;
-    width: 1330px !important;
     position: relative;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 55px;
+    }
+
+    @media (max-width: 766px) {
+        margin-bottom: 20px;
+    }
 }
 
 .swiper-slide-standart-photo {
@@ -194,6 +382,15 @@ ul {
 .swiper-slide-standart-image {
     margin-bottom: 40px;
     width: 945px;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 0;
+        width: 728px;
+    }
+
+    @media (max-width: 766px) {
+        width: 100%;
+    }
 }
 
 .swiper-pagination.swiper-standart-pagination {
@@ -244,6 +441,15 @@ ul {
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 1199px) {
+        flex-direction: column;
+        gap: 55px;
+        width: auto;
+    }
+
+    @media (max-width: 766px) {
+        gap: 20px;
+    }
 }
 
 .hotel-number-info-title {
@@ -252,6 +458,15 @@ ul {
     font-size: 55px;
     text-transform: uppercase;
     color: #f8f9fb;
+
+    @media (max-width: 1199px) {
+        margin-bottom: 15px;
+    }
+
+    @media (max-width: 766px) {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
 }
 
 .hotel-number-info-text {
@@ -259,6 +474,10 @@ ul {
     font-size: 16px;
     letter-spacing: 0.03em;
     color: #f8f9fb;
+
+    @media (max-width: 766px) {
+        font-size: 9px;
+    }
 }
 
 .hotel-number-info-price {
@@ -266,11 +485,23 @@ ul {
     font-size: 25px;
     letter-spacing: 0.03em;
     color: #f8f9fb;
+
+    @media (max-width: 766px) {
+        font-size: 13px;
+    }
 }
 
 
 .hotel-number-button {
     margin-top: 40px;
+
+    @media (max-width: 1199px) {
+        margin-top: 35px;
+    }
+
+    @media (max-width: 766px) {
+        margin-top: 20px;
+    }
 }
 
 .reserve-button {
@@ -284,6 +515,13 @@ ul {
     font-size: 16px;
     letter-spacing: 0.05em;
     color: #f8f9fb;
+
+    @media (max-width: 766px) {
+		margin-right: 10px;
+		width: 104px;
+		height: 26px;
+		font-size: 9px;
+    }
 }
 
 .reserve-button:hover{
@@ -297,6 +535,10 @@ ul {
     line-height: 144%;
     letter-spacing: 0.05em;
     color: #f8f9fb;
+
+    @media (max-width: 766px) {
+		font-size: 9px;
+    }
 }
 
 .main-button:hover{
@@ -305,6 +547,10 @@ ul {
 
 .hotel-number-info-services-description {
     margin-bottom: 55px;
+
+    @media (max-width: 766px) {
+		margin-bottom: 20px;
+    }
 }
 
 .hotel-number-info-services-title {
@@ -313,6 +559,11 @@ ul {
     font-size: 25px;
     letter-spacing: 0.03em;
     color: #fff;
+
+    @media (max-width: 766px) {
+        margin-bottom: 15px;
+		font-size: 13px;
+    }
 }
 
 .hotel-number-info-services-description-text {
@@ -321,6 +572,11 @@ ul {
     font-size: 16px;
     letter-spacing: 0.03em;
     color: #fff;
+
+    @media (max-width: 766px) {
+        width: 270px;
+		font-size: 9px;
+    }
 }
 
 .hotel-number-info-services-content {
@@ -329,6 +585,11 @@ ul {
     gap: 30px;
     width: 400px;
     pointer-events: none;
+
+    @media (max-width: 766px) {
+        width: 200px;
+        gap: 10px;
+    }
 }
 
 .hotel-number-info-services-content-item {
@@ -343,7 +604,14 @@ ul {
     
     @media (max-width: 766px) {
         gap: 3px;
-        font-size: 12px;
+        font-size: 9px;
+    }
+}
+
+.hotel-number-info-services-item-image{
+    @media (max-width: 766px) {
+        width: 13px;
+        height: 13px;
     }
 }
 
@@ -355,6 +623,10 @@ ul {
 
 .layout-footer-container{
     margin-right: 215px;
+
+    @media (max-width: 1199px) {
+        margin-right: 25px;
+    }
 }
 
 .footer-content {
@@ -435,8 +707,11 @@ ul {
     letter-spacing: 0.02em;
     text-transform: uppercase;
     color: #fff;
-}
 
+    @media (max-width: 766px) {
+        font-size: 9px;
+    }
+}
 
 
 // ------------------------------------- FORM  -------------------------------------
@@ -692,7 +967,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .form-order-call-list li:hover{
-    color: red;
+    color: #058240;
 }
 
 .form-button-continued {
@@ -727,12 +1002,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .form-content-number-human {
     padding: 50px;
+
+    @media (max-width: 766px) {
+        padding: 20px;
+    }
 }
 
 .form-data-input-number-wrapper {
     margin-bottom: 50px;
     display: flex;
     gap: 20px;
+
+    @media (max-width: 766px) {
+        margin-bottom: 20px;
+        gap: 10px;
+    }
 }
 
 .form-group-input-number {
@@ -746,6 +1030,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     height: 51px;
     border: 1px solid #f8f9fb;
     border-radius: 10px;
+
+    @media (max-width: 766px) {
+        padding-left: 9px;
+        width: 95px;
+        height: 32px;
+        
+    }
 }
 
 .label-info-number {
@@ -753,6 +1044,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-size: 16px;
     letter-spacing: 0.03em;
     color: #f8f9fb;
+
+    @media (max-width: 766px) {
+        font-size: 9px;
+    }
 }
 
 .number-input{
@@ -762,6 +1057,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     letter-spacing: 0.03em;
     color: #f8f9fb;
     background: transparent;
+
+    @media (max-width: 766px) {
+        font-size: 9px;
+    }
 }
 
 .select-number {
@@ -785,10 +1084,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
     @media (max-width: 766px) {
         padding-left: 15px;
-        width: 95px;
+        width: 85px;
         height: 32px;
     }
 }
+
 .select-number-container-button {
     display: flex;
     align-items: center;
@@ -863,10 +1163,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .select-number-list li:hover{
-    color: red;
+    color: #058240;
 }
-
-
 
 .form-human-data {
     margin-bottom: 40px;

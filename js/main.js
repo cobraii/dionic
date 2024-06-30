@@ -274,7 +274,7 @@ document.querySelector('.form-button-reserve').addEventListener('click', async (
     await sendRequestToServer(request);
 });
 
-// hamburgerMenuView();
+hamburgerMenuView();
 formApplication();
 formOrderCall();
 formSelectNumber()

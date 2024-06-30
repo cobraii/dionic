@@ -73,16 +73,31 @@ ul {
   @media (max-width: 1599px) {
     .layout {
       padding: 0 60px; } }
+  @media (max-width: 1199px) {
+    .layout {
+      padding: 0 20px;
+      max-width: 1024px; } }
 
 .layout.header {
   height: 91px;
   align-items: center; }
+  @media (max-width: 1199px) {
+    .layout.header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between; } }
+  @media (max-width: 766px) {
+    .layout.header {
+      height: 47px; } }
 
 .nav-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%; }
+  @media (max-width: 1199px) {
+    .nav-container {
+      width: auto; } }
 
 @media (max-width: 1199px) {
   .nav-links.nav-links-header {
@@ -100,6 +115,10 @@ ul {
   @media (max-width: 766px) {
     .nav-links {
       gap: 15px; } }
+
+@media (max-width: 1199px) {
+  .nav-links-header {
+    display: none; } }
 
 .nav-links-el {
   font-weight: 400;
@@ -127,10 +146,121 @@ ul {
   background-color: #f8f9fb; }
   @media (max-width: 1199px) {
     .nav-logo {
-      width: 120px; } }
+      width: 160px; } }
   @media (max-width: 766px) {
     .nav-logo {
-      width: 55px; } }
+      width: 67px;
+      height: 23px; } }
+  @media (max-width: 1199px) {
+    .nav-logo img {
+      width: 100px; } }
+  @media (max-width: 766px) {
+    .nav-logo img {
+      width: 45px; } }
+
+.nav-logo-footer {
+  margin-top: -25px; }
+  @media (max-width: 1199px) {
+    .nav-logo-footer {
+      margin-top: -17px; } }
+  @media (max-width: 766px) {
+    .nav-logo-footer {
+      margin-top: 15px; } }
+
+.hamburger-menu {
+  width: 36px;
+  height: 33px;
+  display: none;
+  flex-direction: column;
+  gap: 10px; }
+  @media (max-width: 1199px) {
+    .hamburger-menu {
+      display: flex; } }
+  @media (max-width: 766px) {
+    .hamburger-menu {
+      gap: 5px;
+      width: 20px;
+      height: 17px; } }
+
+.hamburger-menu span {
+  display: block;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #f8f9fb; }
+
+.block {
+  display: none; }
+  @media (max-width: 1199px) {
+    .block {
+      padding: 20px 25px;
+      left: 50%;
+      top: -601px;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: fixed;
+      z-index: 20;
+      width: 100%;
+      height: 576px;
+      background: #121212;
+      transition: 0.3s linear; } }
+  @media (max-width: 766px) {
+    .block {
+      padding-top: 15px; } }
+
+.block.block--active {
+  top: 0; }
+
+.block-data {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column; }
+  @media (max-width: 766px) {
+    .block-data {
+      padding-top: 40px; } }
+
+.block-data-connection {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px; }
+  @media (max-width: 766px) {
+    .block-data-connection {
+      margin-bottom: 15px;
+      gap: 10px; } }
+
+.block-data-content.location {
+  margin-bottom: 40px; }
+  @media (max-width: 766px) {
+    .block-data-content.location {
+      margin-bottom: 20px; } }
+
+.block-data-content-icon {
+  width: 18px;
+  height: 18px;
+  margin-bottom: 10px; }
+  @media (max-width: 766px) {
+    .block-data-content-icon {
+      width: 14px;
+      height: 14px;
+      margin-bottom: 7px; } }
+
+.block-data-content-text {
+  font-weight: 400;
+  font-size: 9px;
+  letter-spacing: 0.03em;
+  color: #fff; }
+
+.block-prev {
+  width: 58px;
+  height: 26px;
+  border-radius: 100px;
+  background: #058240;
+  font-weight: 400;
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  color: #f8f9fb; }
 
 .hotel-number {
   padding: 80px 130px;
@@ -143,15 +273,34 @@ ul {
   @media (max-width: 1599px) {
     .hotel-number {
       padding: 80px 60px; } }
+  @media (max-width: 1199px) {
+    .hotel-number {
+      padding: 50px 20px;
+      gap: 70px; } }
+  @media (max-width: 766px) {
+    .hotel-number {
+      padding: 25px 20px;
+      gap: 40px; } }
 
 .hotel-number-wrapper {
   width: 1330px;
   overflow-x: hidden; }
+  @media (max-width: 1199px) {
+    .hotel-number-wrapper {
+      width: 728px; } }
+  @media (max-width: 766px) {
+    .hotel-number-wrapper {
+      width: 100%; } }
 
 .swiper-standart {
   margin-bottom: 80px;
-  width: 1330px !important;
   position: relative; }
+  @media (max-width: 1199px) {
+    .swiper-standart {
+      margin-bottom: 55px; } }
+  @media (max-width: 766px) {
+    .swiper-standart {
+      margin-bottom: 20px; } }
 
 .swiper-slide-standart-photo {
   display: flex !important;
@@ -161,6 +310,13 @@ ul {
 .swiper-slide-standart-image {
   margin-bottom: 40px;
   width: 945px; }
+  @media (max-width: 1199px) {
+    .swiper-slide-standart-image {
+      margin-bottom: 0;
+      width: 728px; } }
+  @media (max-width: 766px) {
+    .swiper-slide-standart-image {
+      width: 100%; } }
 
 .swiper-pagination.swiper-standart-pagination span {
   border-radius: 100px;
@@ -200,6 +356,14 @@ ul {
   width: 950px;
   display: flex;
   justify-content: space-between; }
+  @media (max-width: 1199px) {
+    .hotel-number-info-container {
+      flex-direction: column;
+      gap: 55px;
+      width: auto; } }
+  @media (max-width: 766px) {
+    .hotel-number-info-container {
+      gap: 20px; } }
 
 .hotel-number-info-title {
   margin-bottom: 40px;
@@ -207,21 +371,40 @@ ul {
   font-size: 55px;
   text-transform: uppercase;
   color: #f8f9fb; }
+  @media (max-width: 1199px) {
+    .hotel-number-info-title {
+      margin-bottom: 15px; } }
+  @media (max-width: 766px) {
+    .hotel-number-info-title {
+      font-size: 20px;
+      margin-bottom: 5px; } }
 
 .hotel-number-info-text {
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.03em;
   color: #f8f9fb; }
+  @media (max-width: 766px) {
+    .hotel-number-info-text {
+      font-size: 9px; } }
 
 .hotel-number-info-price {
   font-weight: 700;
   font-size: 25px;
   letter-spacing: 0.03em;
   color: #f8f9fb; }
+  @media (max-width: 766px) {
+    .hotel-number-info-price {
+      font-size: 13px; } }
 
 .hotel-number-button {
   margin-top: 40px; }
+  @media (max-width: 1199px) {
+    .hotel-number-button {
+      margin-top: 35px; } }
+  @media (max-width: 766px) {
+    .hotel-number-button {
+      margin-top: 20px; } }
 
 .reserve-button {
   margin-right: 20px;
@@ -233,6 +416,12 @@ ul {
   font-size: 16px;
   letter-spacing: 0.05em;
   color: #f8f9fb; }
+  @media (max-width: 766px) {
+    .reserve-button {
+      margin-right: 10px;
+      width: 104px;
+      height: 26px;
+      font-size: 9px; } }
 
 .reserve-button:hover {
   border: 1px solid #f8f9fb; }
@@ -244,12 +433,18 @@ ul {
   line-height: 144%;
   letter-spacing: 0.05em;
   color: #f8f9fb; }
+  @media (max-width: 766px) {
+    .main-button {
+      font-size: 9px; } }
 
 .main-button:hover {
   font-weight: 700; }
 
 .hotel-number-info-services-description {
   margin-bottom: 55px; }
+  @media (max-width: 766px) {
+    .hotel-number-info-services-description {
+      margin-bottom: 20px; } }
 
 .hotel-number-info-services-title {
   margin-bottom: 25px;
@@ -257,6 +452,10 @@ ul {
   font-size: 25px;
   letter-spacing: 0.03em;
   color: #fff; }
+  @media (max-width: 766px) {
+    .hotel-number-info-services-title {
+      margin-bottom: 15px;
+      font-size: 13px; } }
 
 .hotel-number-info-services-description-text {
   width: 470px;
@@ -264,6 +463,10 @@ ul {
   font-size: 16px;
   letter-spacing: 0.03em;
   color: #fff; }
+  @media (max-width: 766px) {
+    .hotel-number-info-services-description-text {
+      width: 270px;
+      font-size: 9px; } }
 
 .hotel-number-info-services-content {
   display: flex;
@@ -271,6 +474,10 @@ ul {
   gap: 30px;
   width: 400px;
   pointer-events: none; }
+  @media (max-width: 766px) {
+    .hotel-number-info-services-content {
+      width: 200px;
+      gap: 10px; } }
 
 .hotel-number-info-services-content-item {
   display: flex;
@@ -284,7 +491,12 @@ ul {
   @media (max-width: 766px) {
     .hotel-number-info-services-content-item {
       gap: 3px;
-      font-size: 12px; } }
+      font-size: 9px; } }
+
+@media (max-width: 766px) {
+  .hotel-number-info-services-item-image {
+    width: 13px;
+    height: 13px; } }
 
 .footer-wrapper {
   padding-top: 40px;
@@ -293,6 +505,9 @@ ul {
 
 .layout-footer-container {
   margin-right: 215px; }
+  @media (max-width: 1199px) {
+    .layout-footer-container {
+      margin-right: 25px; } }
 
 .footer-content {
   margin-bottom: 40px;
@@ -357,6 +572,9 @@ ul {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #fff; }
+  @media (max-width: 766px) {
+    .footer-rights-text {
+      font-size: 9px; } }
 
 .flutter {
   width: 100%;
@@ -570,7 +788,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       font-size: 9px; } }
 
 .form-order-call-list li:hover {
-  color: red; }
+  color: #058240; }
 
 .form-button-continued {
   width: 111px;
@@ -599,11 +817,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .form-content-number-human {
   padding: 50px; }
+  @media (max-width: 766px) {
+    .form-content-number-human {
+      padding: 20px; } }
 
 .form-data-input-number-wrapper {
   margin-bottom: 50px;
   display: flex;
   gap: 20px; }
+  @media (max-width: 766px) {
+    .form-data-input-number-wrapper {
+      margin-bottom: 20px;
+      gap: 10px; } }
 
 .form-group-input-number {
   padding-left: 20px;
@@ -616,12 +841,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 51px;
   border: 1px solid #f8f9fb;
   border-radius: 10px; }
+  @media (max-width: 766px) {
+    .form-group-input-number {
+      padding-left: 9px;
+      width: 95px;
+      height: 32px; } }
 
 .label-info-number {
   font-weight: 400;
   font-size: 16px;
   letter-spacing: 0.03em;
   color: #f8f9fb; }
+  @media (max-width: 766px) {
+    .label-info-number {
+      font-size: 9px; } }
 
 .number-input {
   padding-top: 2px;
@@ -630,6 +863,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   letter-spacing: 0.03em;
   color: #f8f9fb;
   background: transparent; }
+  @media (max-width: 766px) {
+    .number-input {
+      font-size: 9px; } }
 
 .select-number {
   margin-bottom: 40px; }
@@ -650,7 +886,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   @media (max-width: 766px) {
     .select-number-container {
       padding-left: 15px;
-      width: 95px;
+      width: 85px;
       height: 32px; } }
 
 .select-number-container-button {
@@ -716,7 +952,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       font-size: 9px; } }
 
 .select-number-list li:hover {
-  color: red; }
+  color: #058240; }
 
 .form-human-data {
   margin-bottom: 40px;

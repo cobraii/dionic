@@ -500,7 +500,7 @@ ul {
     }
 
     @media (max-width: 766px) {
-        margin-top: 20px;
+        margin-top: 15px;
     }
 }
 
@@ -619,6 +619,10 @@ ul {
     padding-top: 40px;
     width: 100%;
     display: flex;
+    
+    @media (max-width: 766px) {
+        padding-top: 15px;
+    }
 }
 
 .layout-footer-container{
@@ -646,7 +650,6 @@ ul {
         margin-top: 30px;
         font-size: 7px;
     }
-
 }
 
 .footer-content-text {
@@ -694,7 +697,7 @@ ul {
     }
 
     @media (max-width: 766px) {
-        max-width: 150px;
+        width: 190px;
         flex-direction: column;
         justify-content: flex-start;
         align-items: end;

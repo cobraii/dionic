@@ -1,86 +1,124 @@
-const block = document.querySelector('.block')
-const navElement = document.querySelectorAll(".nav-links-el")
-const flutter = document.querySelector(".flutter")
-const buttonReserve = document.querySelectorAll(".reserve-button")
-const datesArrival = document.querySelector('.form-content-dates-arrival')
-const humanData = document.querySelector('.form-content-human-data')
-const titleText = document.querySelector(".form-order-call-checkbox-title")
+const block = document.querySelector('.block');
+const navElement = document.querySelectorAll(".nav-links-el");
+const flutter = document.querySelector(".flutter");
+const contentForm = document.querySelector('.section-content-form');
+const buttonReserve = document.querySelectorAll(".reserve-button");
+const datesArrival = document.querySelector('.form-content-dates-arrival');
+const humanData = document.querySelector('.form-content-human-data');
+const titleText = document.querySelector(".form-order-call-checkbox-title");
+const thanksModalWrapper = document.querySelector('.thanks-modal-wrapper');
 
-buttonReserve.forEach(item =>{
-    item.addEventListener('click', () =>{
-        flutter.classList.remove('none')
-        document.body.style.overflow = 'hidden'
-    })
-})
+buttonReserve.forEach(item => {
+    item.addEventListener('click', () => {
+        flutter.classList.remove('none');
+        document.body.style.overflow = 'hidden';
+    });
+});
 
-function formApplication(){
+function formApplication() {
+    const form = document.querySelector('.form');
+    const steps = Array.from(form.querySelectorAll('.form-content-dates-arrival, .form-content-number-human, .form-content-human-data'));
+    const prevButton = form.querySelector('.form-button-prev');
+    let currentStep = 0;
 
-    document.querySelector('.form-button-cancel').addEventListener('click', (e) =>{
-        e.preventDefault()
-        flutter.classList.add('none')
-        document.body.style.overflow = 'visible'
-    })
-    
-    document.querySelector('.form-button-continued').addEventListener('click', (e) =>{
-        
-        e.preventDefault()
-        datesArrival.classList.add('none')
-        humanData.classList.remove('none')
-
-        if(titleText.innerText !== 'E-mail'){
-            document.querySelector("#form-email").style.display = 'none'
-            document.querySelector("#form-phone").style.display = 'block'
-        } else{
-            document.querySelector("#form-phone").style.display = 'none'
+    const updateForm = () => {
+        steps.forEach((step, index) => {
+            step.classList.toggle('none', index !== currentStep);
+        });
+        prevButton.classList.toggle('none', currentStep === 0);
+    };
+    form.addEventListener('click', (event) => {
+        if (event.target.closest('.form-button-continued')) {
+            event.preventDefault(); 
+            if (currentStep === 0){
+                if (titleText.innerText !== 'E-mail') {
+                    document.querySelector("#form-email").style.display = 'none';
+                    document.querySelector("#form-phone").style.display = 'block';
+                } else {
+                    document.querySelector("#form-phone").style.display = 'none';
+                }
+            }
+            currentStep++;
+            updateForm();
+        } else if (event.target.closest('.form-button-prev')) {
+            event.preventDefault(); 
+            if (currentStep > 0) {
+                currentStep--;
+                updateForm();
+            }
+        } else if (event.target.closest('.form-button-cancel')) {
+            event.preventDefault();
+            flutter.classList.add('none')
+            document.body.style.overflow = 'visible'
+            currentStep = 0
+            updateForm();
         }
-    })
-    
-    document.querySelector('.form-button-prev').addEventListener('click', (e) =>{
-        e.preventDefault()
-        datesArrival.classList.remove('none')
-        humanData.classList.add('none')
-        document.querySelector("#form-email").style.display = ''
-    })
+    });
+    // document.querySelector('.form-button-continued').addEventListener('click', (e) => {
+    //     e.preventDefault();
+    //     datesArrival.classList.add('none');
+    //     humanData.classList.remove('none');
+
+    // });
+
+    // document.querySelector('.form-button-prev').addEventListener('click', (e) => {
+    //     e.preventDefault();
+    //     datesArrival.classList.remove('none');
+    //     humanData.classList.add('none');
+    //     document.querySelector("#form-email").style.display = '';
+    // });
+    updateForm();
+
 }
 
 function formOrderCall() {
-    const ordeCallBlock = document.querySelector('.form-order-call-block')
-    const form = document.querySelector('.form')
-    document.querySelector('.form-order-call-select-container-button').addEventListener('click', (e) =>{
-        e.preventDefault()
-        if (ordeCallBlock.classList.contains('none')) {
-            ordeCallBlock.classList.remove('none');
-        } else {
-            ordeCallBlock.classList.add('none');
-        }
-    })
+    const ordeCallBlock = document.querySelector('.form-order-call-block');
+    document.querySelector('.form-order-call-select-container-button').addEventListener('click', (e) => {
+        e.preventDefault();
+        ordeCallBlock.classList.toggle('none');
+    });
 
-    ordeCallBlock.querySelectorAll('.form-order-call-list li').forEach(function(item) {
-        item.addEventListener('click', function() {
+    ordeCallBlock.querySelectorAll('.form-order-call-list li').forEach(function (item) {
+        item.addEventListener('click', function () {
             titleText.innerText = this.getAttribute('data-value');
             ordeCallBlock.classList.add('none');
         });
     });
 }
 
-function hamburgerMenuView(){
-    
+function formSelectNumber() {
+    const selectNumberBlock = document.querySelector('.select-number-block');
+    document.querySelector('.select-number-container-button').addEventListener('click', (e) => {
+        e.preventDefault();
+        selectNumberBlock.classList.toggle('none');
+    });
+
+    selectNumberBlock.querySelectorAll('.select-number-list li').forEach(function (item) {
+        const titleText = document.querySelector('.select-number-container-title')
+        item.addEventListener('click', function () {
+            titleText.innerText = this.getAttribute('data-value');
+            selectNumberBlock.classList.add('none');
+        });
+    });
+}
+
+function hamburgerMenuView() {
     document.querySelector('.hamburger-menu').addEventListener('click', function () {
         block.classList.toggle('block--active');
     });
-    
+
     document.querySelector('.block-prev').addEventListener('click', function () {
         block.classList.remove('block--active');
     });
-    
+
     navElement.forEach(item => {
-        item.addEventListener("click", ()=> {
+        item.addEventListener("click", () => {
             block.classList.remove('block--active');
-        })
-    })
+        });
+    });
 }
 
-function scroll () {
+function scroll() {
     const contactsButton = document.querySelectorAll('.contact-myself-button');
     const contactsElement = document.getElementById('contacts');
 
@@ -89,14 +127,14 @@ function scroll () {
             contactsElement.scrollIntoView({ behavior: 'smooth' });
         });
     });
-};
+}
 
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('form-checkIn').addEventListener('change', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('form-checkIn').addEventListener('change', function () {
         updateDateDisplay('form-checkIn', 'dateDisplayArrival');
     });
 
-    document.getElementById('form-checkOut').addEventListener('change', function() {
+    document.getElementById('form-checkOut').addEventListener('change', function () {
         updateDateDisplay('form-checkOut', 'dateDisplayDeparture');
     });
 });
@@ -145,23 +183,13 @@ class Request {
     }
 }
 
-function formatDate(dateString) {
-    let parts = dateString.split('.');
-    // Переупорядочиваем части и склеиваем с разделителем "-"
-    return `20${parts[2]}-${parts[0]}-${parts[1]}`;
-}
-
 function formatPhone(phoneNumber) {
-    // Удаляем все символы, кроме цифр
     let cleaned = phoneNumber.replace(/\D/g, '');
-    
-    // Если номер начинается с "7" или "+7", добавляем "8" в начало
     if (cleaned.startsWith('7')) {
         return '8' + cleaned.substr(1);
     } else if (cleaned.startsWith('+7')) {
         return '8' + cleaned.substr(2);
     }
-    // Возвращаем как есть, если не начинается с "7" или "+7"
     return cleaned;
 }
 
@@ -172,8 +200,9 @@ function addRequest(formInputs) {
         'WhatsApp': 'BY_WHATS_APP',
         'E-mail': 'BY_EMAIL',
     };
+    
+    let connectionMethod = connections[formInputs.connection.textContent.trim()];
 
-    let connectionMethod = connections[formInputs.connection.textContent];
     let requestData = {
         firstname: formInputs.firstname.value.trim(),
         lastname: formInputs.lastname.value.trim(),
@@ -185,7 +214,7 @@ function addRequest(formInputs) {
     if (connectionMethod === 'BY_EMAIL') {
         requestData.email = formInputs.email.value.trim();
     } else {
-        requestData.phone = formatPhone(formInputs.phone.value.trim()); // Преобразуем номер телефона
+        requestData.phone = formatPhone(formInputs.phone.value.trim());
     }
 
     let request = new Request(requestData);
@@ -195,7 +224,7 @@ function addRequest(formInputs) {
 
 async function sendRequestToServer(request) {
     try {
-        const response = await fetch('http://188.225.83.63/api/create/client', {
+        const response = await fetch('http://147.45.164.79/api/create/client', {
             method: 'POST',
             headers: {
                 'Accept': '*/*',
@@ -205,28 +234,32 @@ async function sendRequestToServer(request) {
         });
 
         if (response.ok) {
-            // document.querySelector('.thanks-modal-wrapper').classList.remove('none');
-            // document.querySelector('.section-content-form').classList.add('none');
+            document.querySelector('.form').reset();  
+            document.querySelector('#dateDisplayArrival').textContent = '01.06.24';
+            document.querySelector('#dateDisplayDeparture').textContent = '01.06.24';
+            document.querySelector('#dateDisplayArrival').style.color = '#3e3e3e';
+            document.querySelector('#dateDisplayDeparture').style.color = '#3e3e3e';
+            document.querySelector('.form-order-call-checkbox-title').textContent = 'Звонок';
+            inputs.connection = document.querySelector(".form-order-call-checkbox-title");
+            contentForm.classList.add('none');
+            thanksModalWrapper.classList.remove('none');  
 
-            inputs.firstname.value = ''
-            inputs.lastname.value = ''
-            inputs.checkIn.value = ''
-            inputs.checkOut.value = ''
-            inputs.email.value = ''
-            inputs.phone.value = ''
-            inputs.phone.connection = ''
-            // document.querySelector('.thanks-modal-wrapper').addEventListener('click', (event) => {
-            //     const modal = document.querySelector('.thanks-modal');
-            //     if (modal && !modal.contains(event.target)) {
-            //         const wrapper = document.querySelector('.thanks-modal-wrapper');
-            //         if (wrapper) {;
-            //             wrapper.classList.add('none');
-            //             window.setTimeout(() => {
-            //                 wrapper.remove();
-            //             }, 500);
-            //         }
-            //     }
-            // })
+            const closeThanksModal = (event) => {
+                if (!thanksModalWrapper.contains(event.target)) {
+                    thanksModalWrapper.classList.add('none');
+                    contentForm.classList.remove('none');
+                    humanData.classList.add('none');
+                    datesArrival.classList.remove('none');
+                    flutter.classList.add('none');
+                    document.body.style.overflow = 'visible';
+                    document.removeEventListener('click', closeThanksModal); 
+                }
+            };
+
+            document.addEventListener('click', closeThanksModal);
+        } else {
+            const errorData = await response.json();
+            console.error('Server error:', response.status, errorData);
         }
     } catch (error) {
         console.error('Fetch error:', error.message);
@@ -235,13 +268,14 @@ async function sendRequestToServer(request) {
 
 document.querySelector('.form-button-reserve').addEventListener('click', async (e) => {
     e.preventDefault();
+    
     const request = addRequest(inputs);
+    console.log('Request data:', request); 
     await sendRequestToServer(request);
 });
 
-
-hamburgerMenuView()
-formApplication()
-formOrderCall()
-scroll ()
-
+// hamburgerMenuView();
+formApplication();
+formOrderCall();
+formSelectNumber()
+scroll();

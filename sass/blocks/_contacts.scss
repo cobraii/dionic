@@ -1,10 +1,10 @@
 .contacts {
     display: block;
-    background-image: url('/dionic/img/contacts/image-bg.png');
+    background-image: url('/img/contacts/image-bg.png');
     background-size: cover;
 
     @media (max-width: 1199px) {
-        background-image: url('/dionic/img/contacts/image-bg-tablet.png');
+        background-image: url('/img/contacts/image-bg-tablet.png');
     }
 
     @media (max-width: 766px) {

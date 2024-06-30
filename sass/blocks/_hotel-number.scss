@@ -1,6 +1,6 @@
 .hotel-number{
     padding: 130px 0;
-    background-image: url('/dionic/img/hotel-number/image-bg.png');
+    background-image: url('/img/hotel-number/image-bg.png');
     background-size: cover;
     
     @media (max-width: 1199px) {
@@ -231,6 +231,7 @@
     margin-top: 60px;
     display: flex;
     justify-content: center;
+    align-items: center;
 
     @media (max-width: 1199px) {
         margin-top: 20px;
@@ -241,6 +242,21 @@
     }
 }
 
+.contact-read-more-button{
+    background: transparent;
+	font-weight: 400;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+	color: #f8f9fb;
+
+	@media (max-width: 766px) {
+		font-size: 9px;
+    }
+}
+
+.contact-read-more-button:hover{
+	font-weight: 700;
+}
 
 .hotel-number-info-wrapper {
     display: none;

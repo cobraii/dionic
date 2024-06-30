@@ -1,7 +1,7 @@
 .main {
     padding: 0 130px;
     width: 100%;
-    background-image: url('/dionic/img/main-bg.png');
+    background-image: url('/img/main-bg.png');
     background-size: cover;
     color: #ecf1f7;
     
@@ -11,7 +11,7 @@
 
     @media (max-width: 1199px) {
         padding: 0 20px;
-        background-image: url('/dionic/img/main-bg-tablet.png');
+        background-image: url('/img/main-bg-tablet.png');
     }
 }
 
@@ -160,10 +160,6 @@
     height: 5px;
     border-radius: 10px;
     background-color: #f8f9fb;
-
-    @media (max-width: 766px) {
-
-    }
 }
 
 .block{

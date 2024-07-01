@@ -16,30 +16,22 @@
 }
 
 .error-message {
-    z-index: 10;
+    margin: 40px;
     padding: 15px;
     width: 400px;
     position: absolute;
-    top: 30%;
     opacity: 0;
+    z-index: 10;
     background-color: #f8d7da;
     border: 1px solid #f5c6cb;
     border-radius: 4px;
     color: #721c24;
     transition: 0.3s linear;
 
-    @media (max-width: 1599px) {
-        top: 25%;
-    }
-
-    @media (max-width: 1199px) {
-        top: 20%;
-    }
-
     @media (max-width: 766px) {
+        margin: 8px;
         padding: 10px;
         width: 217px;
-        top: 30%;
     }
 }
 
@@ -58,6 +50,7 @@
     height: auto;
     border-radius: 10px;
     background: #121212;
+    position: relative;
     overflow-y: hidden;
   
     @media (max-width: 766px) {
